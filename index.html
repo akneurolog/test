@@ -83,9 +83,6 @@
     transform: translateY(-50px);
 }
 
-        
-
-
 /* Ustawienia dla tekstu "Anna Kunikowska" */
 .banner-text {
     display: flex;
@@ -135,6 +132,33 @@
 .banner-text span:nth-child(14) { animation-delay: 2.4s; }
 .banner-text span:nth-child(15) { animation-delay: 2.5s; }
 .banner-text span:nth-child(16) { animation-delay: 2.6s; }
+
+/* Dodane media queries dla responsywności */
+
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 60px; /* Zmniejszamy wielkość nagłówka na mniejszych ekranach */
+        top: -40px; /* Zmniejszamy uniesienie, aby tekst nie był za wysoko */
+    }
+
+    .banner-text {
+        top: 130px; /* Zwiększamy odstęp między nagłówkiem a imieniem */
+        font-size: 50px; /* Dostosowanie wielkości czcionki */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h2 {
+        font-size: 45px; /* Zmniejszenie rozmiaru tekstu na małych ekranach */
+        top: -20px; /* Zmniejszamy uniesienie */
+    }
+
+    .banner-text {
+        top: 150px; /* Jeszcze większy odstęp na bardzo małych ekranach */
+        font-size: 36px; /* Zmniejszamy wielkość czcionki */
+    }
+}
+
 
 
 /* Stylizacja przycisku "Zobacz ofertę" */
