@@ -293,6 +293,7 @@
     margin: 40px auto;
     padding: 0 20px;
     gap: 40px;
+    box-sizing: border-box;
 }
 
 /* Tekst w sekcji "O Mnie" */
@@ -300,12 +301,13 @@
     text-align: justify;
     font-size: 20px;
     color: #555;
-    max-width: 50%;
+    width: 50%;
     line-height: 1.6;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
-/* Nagłówek sekcji "O Mnie" z efektem hover */
+/* Nagłówek */
 .section-title-bordered:hover {
     background-color: #91627b;
     opacity: 1;
@@ -314,7 +316,8 @@
 
 /* Obrazek w sekcji */
 .image-container {
-    max-width: 50%;
+    width: 50%;
+    box-sizing: border-box;
 }
 
 .image-container img {
@@ -323,26 +326,27 @@
     border-radius: 15px;
 }
 
-/* Efekt powiększenia obrazka przy hover */
+/* Efekt hover */
 .image-container:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-/* ========== RESPONSYWNOŚĆ ========== */
+/* ===================== RESPONSYWNOŚĆ ===================== */
 
-/* Tablety i mniejsze (max 1024px) */
+/* Tablety i mniejsze */
 @media (max-width: 1024px) {
     .about-section {
         flex-direction: column;
-        align-items: center;
-        gap: 30px;
+        align-items: stretch;
+        padding: 0 20px;
+        gap: 20px;
     }
 
     .content,
     .image-container {
-        max-width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
     }
 
     .content {
@@ -352,52 +356,35 @@
 
     .image-container img {
         max-width: 100%;
+        margin: 0 auto;
     }
 }
 
-/* Telefony (max 768px) */
+/* Telefony */
 @media (max-width: 768px) {
     .content {
         font-size: 16px;
         line-height: 1.5;
-        text-align: left;
-    }
-
-    .image-container {
-        max-width: 100%;
-        margin-top: 10px;
-    }
-
-    .image-container img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
     }
 
     .section-title-bordered {
         font-size: 20px;
-        text-align: center;
+        text-align: left;
     }
 }
 
-/* Małe telefony (max 480px) */
+/* Małe telefony */
 @media (max-width: 480px) {
     .content {
         font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .image-container img {
-        max-width: 100%;
-        height: auto;
+        padding: 0;
     }
 
     .section-title-bordered {
         font-size: 18px;
     }
 }
+
 
 
 
