@@ -386,6 +386,13 @@
     border: 2px solid #91627b;
 }
 
+	    /* Dodajemy styl dla kliknięcia (focus) na małych ekranach */
+@media (max-width: 768px) {
+    .nav-link:focus {
+        border: 1px solid #91627b; /* Zmniejszamy obramowanie do 1px po kliknięciu */
+        padding: 8px 15px; /* Zmniejszamy padding dla lepszego dopasowania */
+    }
+
 .logo {
     height: 100px;
     width: auto;
