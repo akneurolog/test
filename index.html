@@ -331,7 +331,7 @@
 
 /* ========== RESPONSYWNOŚĆ ========== */
 
-/* Tablety (max 1024px) */
+/* Tablety i mniejsze (max 1024px) */
 @media (max-width: 1024px) {
     .about-section {
         flex-direction: column;
@@ -349,6 +349,10 @@
         font-size: 18px;
         text-align: left;
     }
+
+    .image-container img {
+        max-width: 100%;
+    }
 }
 
 /* Telefony (max 768px) */
@@ -356,10 +360,24 @@
     .content {
         font-size: 16px;
         line-height: 1.5;
+        text-align: left;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 
     .section-title-bordered {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
     }
 }
@@ -368,12 +386,19 @@
 @media (max-width: 480px) {
     .content {
         font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
     }
 
     .section-title-bordered {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
+
 
 
 	    
