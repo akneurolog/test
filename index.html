@@ -367,6 +367,8 @@
     justify-content: space-evenly;
     flex-grow: 1; /* Sprawia, że linki zajmują całą przestrzeń po prawej stronie */
     margin-right: 20px;
+    flex-wrap: nowrap; /* Zapobiega zawijaniu się linków */
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
 }
 
 /* Linki nawigacyjne */
@@ -378,6 +380,7 @@
     transition: all 0.3s ease-in-out;
     border-radius: 20px; /* Zaokrąglone rogi */
     font-size: 16px; /* Zmieniona czcionka dla standardowych ekranów */
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
 }
 
 /* Efekt hover dla linków */
@@ -405,14 +408,16 @@
     }
 
     .nav-links {
-        display: block; /* Zmiana układu na blokowy na urządzeniach mobilnych */
-        text-align: center; /* Wyśrodkowanie linków */
+        display: flex; /* Utrzymanie elastycznego układu */
+        justify-content: center; /* Wyśrodkowanie linków */
+        width: 100%; /* Ustalamy, że linki mają szerokość 100% */
+        text-align: center; /* Wyśrodkowanie tekstu */
     }
 
     .nav-link {
-        margin: 10px 0; /* Odstęp pionowy między linkami */
-        padding: 10px;
+        margin: 10px; /* Zwiększenie marginesu między linkami */
         font-size: 14px; /* Mniejsza czcionka na telefonach */
+        padding: 10px 15px; /* Zmniejszenie paddingu, by linki były bardziej zwarte */
     }
 
     .logo {
@@ -434,7 +439,6 @@
         font-size: 12px; /* Dostosowanie rozmiaru czcionki w linkach */
     }
 }
-
 
 
 	
