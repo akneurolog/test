@@ -284,46 +284,87 @@
        
 
 /* Sekcja o Mnie */
-        .content {
-            text-align: justify;
-            font-size: 20px;
-            color: #555;
-            max-width: 50%; /* Zmniejszenie szerokości tekstu w sekcji "O mnie" */
-            line-height: 1.6;
-            margin-right: 100px; /* Margines z prawej strony */
-            transition: transform 0.3s ease; /* Dodanie animacji transformacji */
-        }
-          /* Efekt po najechaniu na nagłówek "o mnie" */
-            .section-title-bordered:hover {
-            background-color: #91627be; /* Kolor tła przycisku przy hover */
-            opacity: 1; /* Pełna nieprzezroczystość przy najechaniu */
-            transform: scale(1.1); /* Powiększenie przycisku */
-  }
-
-          .image-container {
-            max-width: 60%; /* Większe zdjęcie */
-            margin-left: 30px; /* Oddalenie zdjęcia od tekstu */
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px; /* Zaokrąglenie krawędzi zdjęcia */
-        }
-
-/* Efekt powiększenia po najechaniu kursorem */
-.image-container:hover {
-    transform: scale(1.05);  /* Powiększenie sekcji o 5% */
-    transition: transform 0.3s ease-in-out;  /* Płynna animacja powiększenia */
+.content {
+    text-align: justify;
+    font-size: 20px;
+    color: #555;
+    max-width: 50%;
+    line-height: 1.6;
+    margin-right: 100px;
+    transition: transform 0.3s ease;
 }
-/* Efekt powiększenia po najechaniu kursorem */
-.image-container:hover {
-    transform: scale(1.05);  /* Powiększenie sekcji o 5% */
-    transition: transform 0.3s ease-in-out;  /* Płynna animacja powiększenia */
+
+.section-title-bordered:hover {
+    background-color: #91627be; /* Uwaga: chyba literówka w kolorze (brakuje cyfry) */
+    opacity: 1;
+    transform: scale(1.1);
 }
- 
 
+.image-container {
+    max-width: 60%;
+    margin-left: 30px;
+}
 
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ========== RESPONSYWNOŚĆ ========== */
+
+/* Tablety (do 1024px) */
+@media (max-width: 1024px) {
+    .content {
+        max-width: 80%;
+        font-size: 18px;
+        margin: 0 auto 30px auto;
+        text-align: left;
+    }
+
+    .image-container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Telefony (do 768px) */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%;
+        font-size: 16px;
+        margin: 0 auto 20px auto;
+        line-height: 1.5;
+    }
+
+    .image-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .section-title-bordered {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+/* Bardzo małe ekrany (do 480px) */
+@media (max-width: 480px) {
+    .content {
+        font-size: 14px;
+    }
+
+    .section-title-bordered {
+        font-size: 20px;
+    }
+}
+
+	    
 
 /* Pasek nawigacyjny */
 .sticky-navbar {
