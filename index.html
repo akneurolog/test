@@ -329,157 +329,126 @@
 .sticky-navbar {
     position: sticky;
     top: 0;
-    background-color: white; /* Pasek nawigacyjny z białym tłem */
+    background-color: white;
     padding: 10px 20px;
-    text-align: left; /* Wyrównanie logo do lewej */
-    color: black; /* Kolor tekstu ogólny na czarny */
-    font-size: 16px; /* Domyślna czcionka dla średnich ekranów */
-    font-weight: 700; /* Pogrubiona czcionka */
-    width: 100%; /* Ustawienie szerokości na 100% */
-    font-family: 'The Seasons', sans-serif; /* Czcionka "The Seasons" */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień na pasku */
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    font-family: 'The Seasons', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between; /* Rozmieszczenie logo i menu po dwóch stronach */
+    justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* Ustalamy wysoki z-index, aby pasek był na wierzchu */
+    z-index: 1000;
     overflow-x: hidden;
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Płynna animacja zanikania i pojawiania się */
-    max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
-    margin: 0 auto; /* Centrowanie sekcji */
-    padding: 10px 0; /* Zmniejszenie paddingu, by nie wychodził poza ekran */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
 }
 
-/* Jeśli masz kontener wokół paska, to również powinieneś ustawić max-width */
-.sticky-navbar-container {
-    width: 100%; /* Zapewnia pełną szerokość */
-    margin: 0 auto; /* Centrowanie paska nawigacyjnego */
-}
-
-/* Styl dla ukrytego paska nawigacyjnego */
+/* Ukrycie paska nawigacyjnego */
 .sticky-navbar.hidden {
-    opacity: 0; /* Ukrywa pasek */
-    transform: translateY(-100%); /* Przesuwa pasek poza widoczny obszar */
-    visibility: hidden; /* Ukrywa pasek */
+    opacity: 0;
+    transform: translateY(-100%);
+    visibility: hidden;
 }
 
-/* Sekcje nawigacyjne po prawej stronie */
+/* Nav Links */
 .nav-links {
     display: flex;
     justify-content: space-evenly;
-    flex-grow: 1; /* Sprawia, że linki zajmują całą przestrzeń po prawej stronie */
+    flex-grow: 1;
     margin-right: 20px;
-    flex-wrap: nowrap; /* Zapobiega zawijaniu się linków */
-    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 /* Linki nawigacyjne */
 .nav-link {
-    color: #91627b; /* Kolor tekstu nazw sekcji na pasku nawigacyjnym */
-    margin: 0 15px; /* Zmniejszenie marginesu między linkami */
+    color: #91627b;
+    margin: 0 15px;
     text-decoration: none;
-    padding: 10px 16px; /* Zwiększenie paddingu między linkami */
+    padding: 10px 16px;
     transition: all 0.3s ease-in-out;
-    border-radius: 20px; /* Zaokrąglone rogi */
-    font-size: 18px; /* Czcionka linków na większych ekranach */
-    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
-}
-
-/* Efekt hover dla linków */
-.nav-link:hover {
-    text-decoration: none;
-    background-color: #91627b; /* Kolor tła na #91627b po najechaniu */
-    color: white; /* Kolor tekstu na biały po najechaniu */
-    padding: 10px 18px; /* Zwiększenie paddingu po najechaniu */
     border-radius: 20px;
-    border: 2px solid #91627b; /* Zwiększenie obramowania po najechaniu */
+    font-size: 18px;
+    white-space: nowrap;
 }
 
-/* Logo w lewym rogu */
+.nav-link:hover {
+    background-color: #91627b;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: 2px solid #91627b;
+}
+
 .logo {
-    height: 100px; /* Wysokość logo na większych ekranach */
-    width: auto;  /* Automatyczne dopasowanie szerokości, proporcjonalnie do wysokości */
+    height: 100px;
+    width: auto;
     margin-right: 20px;
-    vertical-align: middle; /* Wyrównanie w pionie */
+    vertical-align: middle;
 }
 
-/* RESPONSYWNOŚĆ: Dostosowanie do urządzeń mobilnych */
+/* Responsive */
 @media (max-width: 1024px) {
-    /* Na większych ekranach, ale mniejszych niż desktop (np. tablet) */
     .sticky-navbar {
-        font-size: 14px; /* Czcionka paska nawigacyjnego */
-        padding: 12px 25px; /* Większy padding */
+        font-size: 14px;
+        padding: 12px 25px;
     }
-
     .nav-links {
-        justify-content: center; /* Wyśrodkowanie linków */
+        justify-content: center;
     }
-
     .nav-link {
-        font-size: 14px; /* Czcionka linków na tabletach */
-        margin: 0 10px; /* Mniejszy margines */
-        padding: 8px 15px; /* Mniejszy padding */
+        font-size: 14px;
+        margin: 0 10px;
+        padding: 8px 15px;
     }
-
     .logo {
-        height: 70px; /* Zmniejszenie logo na tabletach */
+        height: 70px;
     }
 }
 
-/* RESPONSYWNOŚĆ: Dostosowanie do urządzeń mobilnych */
 @media (max-width: 768px) {
     .sticky-navbar {
-        padding: 10px 15px; /* Zmniejszenie paddingu dla mniejszych ekranów */
-        font-size: 12px; /* Zmniejszenie czcionki */
+        padding: 10px 15px;
+        font-size: 12px;
     }
-
     .nav-links {
-        display: flex; /* Utrzymanie elastycznego układu */
-        justify-content: center; /* Wyśrodkowanie linków */
-        width: 100%; /* Ustalamy, że linki mają szerokość 100% */
-        text-align: center; /* Wyśrodkowanie tekstu */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
     }
-
     .nav-link {
-        margin: 0 8px; /* Zmniejszenie marginesu między linkami */
-        font-size: 10px; /* Czcionka linków */
-        padding: 6px 12px; /* Mniejszy padding */
+        margin: 0 8px;
+        font-size: 10px;
+        padding: 6px 12px;
     }
-
     .logo {
-        height: 50px; /* Zmniejszenie wysokości logo na urządzeniach mobilnych */
+        height: 50px;
     }
 }
 
 @media (max-width: 480px) {
     .sticky-navbar {
-        padding: 10px 10px; /* Mniejsze paddingi na jeszcze mniejszych ekranach */
+        padding: 10px 10px;
     }
-
     .nav-links {
-        margin-top: 10px; /* Dodanie marginesu między linkami a logo */
+        margin-top: 10px;
     }
-
     .nav-link {
-        padding: 4px 8px; /* Zmniejszenie paddingu w linkach */
-        font-size: 8px; /* Dostosowanie rozmiaru czcionki w linkach */
+        padding: 4px 8px;
+        font-size: 8px;
     }
-
     .logo {
-        height: 40px; /* Zmniejszenie wysokości logo na jeszcze mniejszych ekranach */
+        height: 40px;
     }
 }
 
-/* Animacja na scroll */
-@keyframes hide-navbar {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-}
 
 
 
