@@ -326,33 +326,32 @@
 
 
         /* Pasek nawigacyjny */
-        .sticky-navbar {
-            position: sticky;
-            top: 0;
-            background-color: white; /* Pasek nawigacyjny z białym tłem */
-            padding: 10px 20px;
-            text-align: left; /* Wyrównanie logo do lewej */
-            color: black; /* Kolor tekstu ogólny na czarny */
-            font-size: 16px; /* Mniejsza czcionka */
-            font-weight: 700; /* Pogrubiona czcionka */
-            width: 100%; /* Ustawienie szerokości na 100% */
-            font-family: 'The Seasons', sans-serif; /* Czcionka "The Seasons" */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień na pasku */
-            display: flex;
-            justify-content: space-between; /* Rozmieszczenie logo i menu po dwóch stronach */
-            align-items: center;
-	    z-index: 1000; /* Ważne, aby pasek nawigacyjny był na wierzchu */
-            overflow-x: hidden;
-            transition: opacity 0.6s ease, transform 0.6s ease; /* Płynna animacja zanikania i pojawiania się */
-max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Pasek nawigacyjny z białym tłem */
+    padding: 10px 20px;
+    text-align: left; /* Wyrównanie logo do lewej */
+    color: black; /* Kolor tekstu ogólny na czarny */
+    font-size: 16px; /* Mniejsza czcionka */
+    font-weight: 700; /* Pogrubiona czcionka */
+    width: 100%; /* Ustawienie szerokości na 100% */
+    font-family: 'The Seasons', sans-serif; /* Czcionka "The Seasons" */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień na pasku */
+    display: flex;
+    justify-content: space-between; /* Rozmieszczenie logo i menu po dwóch stronach */
+    align-items: center;
+    z-index: 1000; /* Ważne, aby pasek nawigacyjny był na wierzchu */
+    overflow-x: hidden;
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Płynna animacja zanikania i pojawiania się */
+    max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
     margin: 0 auto; /* Centrowanie sekcji */
     padding: 10px 0; /* Zmniejszenie paddingu, by nie wychodził poza ekran */
-        }
-
+}
 
 /* Jeśli masz kontener wokół paska, to również powinieneś ustawić max-width */
 .sticky-navbar-container {
-    max-width: 100%; /* Kontener nawigacji */
+    width: 100%; /* Zapewnia pełną szerokość */
     margin: 0 auto; /* Centrowanie paska nawigacyjnego */
 }
 
@@ -362,41 +361,80 @@ max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
     transform: translateY(-100%); /* Przesuwa pasek poza widoczny obszar */
 }
 
-        /* Sekcje nawigacyjne po prawej stronie */
-        .nav-links {
-            display: flex;
-            justify-content: space-evenly;
-            flex-grow: 1; /* Sprawia, że linki zajmują całą przestrzeń po prawej stronie */
-            margin-right: 20px;
-        }
+/* Sekcje nawigacyjne po prawej stronie */
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1; /* Sprawia, że linki zajmują całą przestrzeń po prawej stronie */
+    margin-right: 20px;
+}
 
-        /* Linki nawigacyjne */
-        .nav-link {
-            color: #91627b; /* Kolor tekstu nazw sekcji na pasku nawigacyjnym */
-            margin: 0 20px;
-            text-decoration: none;
-            padding: 10px;
-            transition: all 0.3s ease-in-out;
-            border-radius: 20px; /* Zaokrąglone rogi */
-        }
+/* Linki nawigacyjne */
+.nav-link {
+    color: #91627b; /* Kolor tekstu nazw sekcji na pasku nawigacyjnym */
+    margin: 0 20px;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px; /* Zaokrąglone rogi */
+}
 
-        /* Efekt hover dla linków */
-        .nav-link:hover {
-            text-decoration: none;
-            background-color: #91627b; /* Kolor tła na #91627b po najechaniu */
-            color: white; /* Kolor tekstu na biały po najechaniu */
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
+/* Efekt hover dla linków */
+.nav-link:hover {
+    text-decoration: none;
+    background-color: #91627b; /* Kolor tła na #91627b po najechaniu */
+    color: white; /* Kolor tekstu na biały po najechaniu */
+    padding: 10px 20px;
+    border-radius: 20px;
+}
 
-        /* Logo w lewym rogu */
-        .logo {
-            height: 100px; /* Zwiększenie wysokości logo do 100px */
-            width: auto;  /* Automatyczne dopasowanie szerokości, proporcjonalnie do wysokości */
-            margin-right: 20px;
-            vertical-align: middle; /* Wyrównanie w pionie */
-        }
+/* Logo w lewym rogu */
+.logo {
+    height: 100px; /* Zwiększenie wysokości logo do 100px */
+    width: auto;  /* Automatyczne dopasowanie szerokości, proporcjonalnie do wysokości */
+    margin-right: 20px;
+    vertical-align: middle; /* Wyrównanie w pionie */
+}
 
+/* RESPONSYWNOŚĆ: Dostosowanie do urządzeń mobilnych */
+@media (max-width: 768px) {
+    .sticky-navbar {
+        padding: 10px 15px; /* Zmniejszenie paddingu dla mniejszych ekranów */
+        font-size: 14px; /* Mniejszy rozmiar czcionki */
+    }
+
+    .nav-links {
+        display: block; /* Zmiana układu na blokowy na urządzeniach mobilnych */
+        text-align: center; /* Wyśrodkowanie linków */
+    }
+
+    .nav-link {
+        margin: 10px 0; /* Odstęp pionowy między linkami */
+        padding: 10px;
+    }
+
+    .logo {
+        height: 80px; /* Zmniejszenie wysokości logo na urządzeniach mobilnych */
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-navbar {
+        padding: 10px 10px; /* Mniejsze paddingi na jeszcze mniejszych ekranach */
+    }
+
+    .nav-links {
+        margin-top: 10px; /* Dodanie marginesu między linkami a logo */
+    }
+
+    .nav-link {
+        padding: 8px 15px; /* Zmniejszenie paddingu w linkach */
+        font-size: 12px; /* Dostosowanie rozmiaru czcionki w linkach */
+    }
+}
+
+
+	
         /* Strzałka na dole prawej strony */
         .scroll-to-top {
             position: fixed;
