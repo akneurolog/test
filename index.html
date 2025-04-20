@@ -213,9 +213,6 @@
 }
 
 
-
-	    
-
 /* Styl nagłówka sekcji z ramką */
 .section-title-bordered {
     font-size: 32px;
@@ -260,12 +257,27 @@
     }
 
     .section-title-bordered {
-        left: 15px;
+        left: 0; /* Zmienione z left: 15px */
         top: 15px;
         font-size: 16px;
         padding: 6px 12px;
+        width: 100%; /* Zmieniono z max-content na 100% */
+        text-align: center; /* Wycentrowanie tekstu na małych ekranach */
+        border-radius: 0; /* Zmieniono, aby dostosować wygląd */
     }
 }
+
+@media (max-width: 480px) {
+    .section-title-bordered {
+        font-size: 14px; /* Dostosowanie jeszcze mniejszego rozmiaru tekstu */
+        padding: 5px 10px;
+    }
+}
+
+	    
+
+
+	    
 
 
        
