@@ -325,7 +325,7 @@
 
 
 
-        /* Pasek nawigacyjny */
+       /* Pasek nawigacyjny */
 .sticky-navbar {
     position: sticky;
     top: 0;
@@ -379,7 +379,7 @@
     padding: 10px;
     transition: all 0.3s ease-in-out;
     border-radius: 20px; /* Zaokrąglone rogi */
-    font-size: 16px; /* Zmieniona czcionka dla standardowych ekranów */
+    font-size: 14px; /* Zmieniona czcionka na mniejszą dla urządzeń mobilnych */
     white-space: nowrap; /* Zapobiega zawijaniu tekstu */
 }
 
@@ -394,7 +394,7 @@
 
 /* Logo w lewym rogu */
 .logo {
-    height: 100px; /* Zwiększenie wysokości logo do 100px */
+    height: 60px; /* Zmniejszenie wysokości logo na mniejszych ekranach */
     width: auto;  /* Automatyczne dopasowanie szerokości, proporcjonalnie do wysokości */
     margin-right: 20px;
     vertical-align: middle; /* Wyrównanie w pionie */
@@ -415,13 +415,13 @@
     }
 
     .nav-link {
-        margin: 10px; /* Zwiększenie marginesu między linkami */
-        font-size: 14px; /* Mniejsza czcionka na telefonach */
-        padding: 10px 15px; /* Zmniejszenie paddingu, by linki były bardziej zwarte */
+        margin: 0 15px; /* Zmniejszenie marginesu między linkami */
+        font-size: 12px; /* Dostosowanie rozmiaru czcionki w linkach */
+        padding: 8px 12px; /* Zmniejszenie paddingu, by linki były bardziej zwarte */
     }
 
     .logo {
-        height: 80px; /* Zmniejszenie wysokości logo na urządzeniach mobilnych */
+        height: 50px; /* Zmniejszenie wysokości logo na urządzeniach mobilnych */
     }
 }
 
@@ -435,10 +435,15 @@
     }
 
     .nav-link {
-        padding: 8px 15px; /* Zmniejszenie paddingu w linkach */
-        font-size: 12px; /* Dostosowanie rozmiaru czcionki w linkach */
+        padding: 6px 10px; /* Zmniejszenie paddingu w linkach */
+        font-size: 10px; /* Dostosowanie rozmiaru czcionki w linkach */
+    }
+
+    .logo {
+        height: 40px; /* Zmniejszenie wysokości logo na jeszcze mniejszych ekranach */
     }
 }
+
 
 
 	
