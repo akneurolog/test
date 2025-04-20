@@ -198,7 +198,7 @@
 /* RESPONSYWNOŚĆ dla przycisku */
 @media (max-width: 768px) {
     .btn-offer {
-        font-size: 16px;
+        font-size: 14px;
         padding: 10px 20px;
         margin-top: 20px;
     }
@@ -206,7 +206,7 @@
 
 @media (max-width: 480px) {
     .btn-offer {
-        font-size: 14px;
+        font-size: 12px;
         padding: 8px 16px;
         margin-top: 15px;
     }
@@ -224,9 +224,9 @@
     color: white;
     background-color: #91627b;
     text-align: left;
-    position: absolute;
-    left: 100px;
-    top: 50px;
+    position: relative;  /* Zmienione z absolute na relative */
+    left: 0;             /* Usunięto left: 100px */
+    top: 0;              /* Usunięto top: 50px */
 }
 
 /* RESPONSYWNOŚĆ: Styl dla telefonów i tabletów */
@@ -257,13 +257,13 @@
     }
 
     .section-title-bordered {
-        left: 0; /* Zmienione z left: 15px */
-        top: 15px;
         font-size: 16px;
         padding: 6px 12px;
         width: 100%; /* Zmieniono z max-content na 100% */
         text-align: center; /* Wycentrowanie tekstu na małych ekranach */
         border-radius: 0; /* Zmieniono, aby dostosować wygląd */
+        left: 0;   /* Zapewnia pełną szerokość */
+        top: 0;    /* Zapewnia, że jest na górze */
     }
 }
 
@@ -273,6 +273,7 @@
         padding: 5px 10px;
     }
 }
+
 
 	    
 
