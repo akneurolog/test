@@ -325,7 +325,7 @@
 
 
 
-     /* Pasek nawigacyjny */
+   /* Pasek nawigacyjny */
 .sticky-navbar {
     position: sticky;
     top: 0;
@@ -333,7 +333,7 @@
     padding: 10px 20px;
     text-align: left; /* Wyrównanie logo do lewej */
     color: black; /* Kolor tekstu ogólny na czarny */
-    font-size: 16px; /* Mniejsza czcionka */
+    font-size: 16px; /* Domyślna czcionka dla średnich ekranów */
     font-weight: 700; /* Pogrubiona czcionka */
     width: 100%; /* Ustawienie szerokości na 100% */
     font-family: 'The Seasons', sans-serif; /* Czcionka "The Seasons" */
@@ -355,12 +355,6 @@
     margin: 0 auto; /* Centrowanie paska nawigacyjnego */
 }
 
-/* Styl, gdy pasek nawigacyjny jest ukryty */
-.sticky-navbar.hidden {
-    opacity: 0; /* Ukrywa pasek */
-    transform: translateY(-100%); /* Przesuwa pasek poza widoczny obszar */
-}
-
 /* Sekcje nawigacyjne po prawej stronie */
 .nav-links {
     display: flex;
@@ -379,7 +373,7 @@
     padding: 8px 14px; /* Zmniejszenie paddingu między linkami */
     transition: all 0.3s ease-in-out;
     border-radius: 20px; /* Zaokrąglone rogi */
-    font-size: 14px; /* Ustawiona czcionka dla standardowych ekranów */
+    font-size: 18px; /* Większa czcionka dla większych ekranów */
     white-space: nowrap; /* Zapobiega zawijaniu tekstu */
 }
 
