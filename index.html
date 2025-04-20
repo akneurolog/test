@@ -333,7 +333,7 @@
     padding: 10px 20px;
     text-align: left; /* Wyrównanie logo do lewej */
     color: black; /* Kolor tekstu ogólny na czarny */
-    font-size: 20px; /* Domyślna czcionka dla średnich ekranów */
+    font-size: 16px; /* Domyślna czcionka dla średnich ekranów */
     font-weight: 700; /* Pogrubiona czcionka */
     width: 100%; /* Ustawienie szerokości na 100% */
     font-family: 'The Seasons', sans-serif; /* Czcionka "The Seasons" */
@@ -341,7 +341,7 @@
     display: flex;
     justify-content: space-between; /* Rozmieszczenie logo i menu po dwóch stronach */
     align-items: center;
-    z-index: 1000; /* Ważne, aby pasek nawigacyjny był na wierzchu */
+    z-index: 1000; /* Ustalamy wysoki z-index, aby pasek był na wierzchu */
     overflow-x: hidden;
     transition: opacity 0.6s ease, transform 0.6s ease; /* Płynna animacja zanikania i pojawiania się */
     max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
@@ -380,7 +380,7 @@
     padding: 10px 16px; /* Zwiększenie paddingu między linkami */
     transition: all 0.3s ease-in-out;
     border-radius: 20px; /* Zaokrąglone rogi */
-    font-size: 25px; /* Czcionka linków na większych ekranach */
+    font-size: 18px; /* Czcionka linków na większych ekranach */
     white-space: nowrap; /* Zapobiega zawijaniu tekstu */
 }
 
@@ -391,11 +391,12 @@
     color: white; /* Kolor tekstu na biały po najechaniu */
     padding: 10px 18px; /* Zwiększenie paddingu po najechaniu */
     border-radius: 20px;
+    border: 2px solid #91627b; /* Zwiększenie obramowania po najechaniu */
 }
 
 /* Logo w lewym rogu */
 .logo {
-    height: 200px; /* Wysokość logo na większych ekranach */
+    height: 100px; /* Wysokość logo na większych ekranach */
     width: auto;  /* Automatyczne dopasowanie szerokości, proporcjonalnie do wysokości */
     margin-right: 20px;
     vertical-align: middle; /* Wyrównanie w pionie */
@@ -467,6 +468,19 @@
         height: 40px; /* Zmniejszenie wysokości logo na jeszcze mniejszych ekranach */
     }
 }
+
+/* Animacja na scroll */
+@keyframes hide-navbar {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
 
 
 
