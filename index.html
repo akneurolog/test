@@ -283,26 +283,38 @@
 
        
 
-/* Sekcja o Mnie */
+/* Kontener layoutu sekcji "O Mnie" */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+/* Tekst w sekcji "O Mnie" */
 .content {
     text-align: justify;
     font-size: 20px;
     color: #555;
     max-width: 50%;
     line-height: 1.6;
-    margin-right: 100px;
     transition: transform 0.3s ease;
 }
 
+/* Nagłówek sekcji "O Mnie" z efektem hover */
 .section-title-bordered:hover {
-    background-color: #91627be; /* Uwaga: chyba literówka w kolorze (brakuje cyfry) */
+    background-color: #91627b;
     opacity: 1;
     transform: scale(1.1);
 }
 
+/* Obrazek w sekcji */
 .image-container {
-    max-width: 60%;
-    margin-left: 30px;
+    max-width: 50%;
 }
 
 .image-container img {
@@ -311,6 +323,7 @@
     border-radius: 15px;
 }
 
+/* Efekt powiększenia obrazka przy hover */
 .image-container:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
@@ -318,33 +331,31 @@
 
 /* ========== RESPONSYWNOŚĆ ========== */
 
-/* Tablety (do 1024px) */
+/* Tablety (max 1024px) */
 @media (max-width: 1024px) {
-    .content {
-        max-width: 80%;
-        font-size: 18px;
-        margin: 0 auto 30px auto;
-        text-align: left;
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
     }
 
+    .content,
     .image-container {
-        max-width: 80%;
+        max-width: 90%;
         margin: 0 auto;
+    }
+
+    .content {
+        font-size: 18px;
+        text-align: left;
     }
 }
 
-/* Telefony (do 768px) */
+/* Telefony (max 768px) */
 @media (max-width: 768px) {
     .content {
-        max-width: 90%;
         font-size: 16px;
-        margin: 0 auto 20px auto;
         line-height: 1.5;
-    }
-
-    .image-container {
-        max-width: 90%;
-        margin: 0 auto;
     }
 
     .section-title-bordered {
@@ -353,7 +364,7 @@
     }
 }
 
-/* Bardzo małe ekrany (do 480px) */
+/* Małe telefony (max 480px) */
 @media (max-width: 480px) {
     .content {
         font-size: 14px;
@@ -363,6 +374,9 @@
         font-size: 20px;
     }
 }
+
+
+	    
 
 	    
 
@@ -1030,18 +1044,23 @@ iframe {
     </div>
  
 
-    <!-- Sekcja O Mnie -->
-    <section id="about">
+   <!-- Sekcja O Mnie -->
+<section id="about">
+    <div class="about-section">
         <div class="content">
             <div class="section-title-bordered">
                 O Mnie
             </div>
-            <p>Nazywam się Anna Kunikowska, jestem neurologopedą, specjalistą w zakresie wczesnej interwencji logopedycznej oraz terapeutą miofunkcjonalnym. Moje wykształcenie zdobyłam na renomowanym Instytucie Logopedii, który powstał w wyniku współpracy Uniwersytetu Gdańskiego i Gdańskiego Uniwersytetu Medycznego, a także w oparciu o liczne szkolenia oraz warsztaty specjalistyczne, które regularnie odbywam, aby dostarczyć pacjentom najbardziej efektywnych i nowoczesnych metod terapii.</p>
+            <p>
+                Nazywam się Anna Kunikowska, jestem neurologopedą, specjalistą w zakresie wczesnej interwencji logopedycznej oraz terapeutą miofunkcjonalnym. Moje wykształcenie zdobyłam na renomowanym Instytucie Logopedii, który powstał w wyniku współpracy Uniwersytetu Gdańskiego i Gdańskiego Uniwersytetu Medycznego, a także w oparciu o liczne szkolenia oraz warsztaty specjalistyczne, które regularnie odbywam, aby dostarczyć pacjentom najbardziej efektywnych i nowoczesnych metod terapii.
+            </p>
         </div>
         <div class="image-container">
             <img src="images/moja_fotografia.jpg" alt="Anna Kunikowska" />
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Sekcja Oferta -->
     <section id="offer">
