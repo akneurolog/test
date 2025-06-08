@@ -854,19 +854,31 @@
         /* Nowa sekcja "Oferta" z dwiema kolumnami */
 .offer-container {
     display: flex;
-    justify-content: center;
-    gap: 70px;
+    justify-content: center; /* Wyśrodkowanie */
+    gap: 40px; /* Mniejszy gap na start */
     margin-top: 20px;
+    flex-wrap: nowrap; /* Nie zawijamy w pion */
 }
 
 .offer-column {
-    width: 40%;
+    flex: 1 1 45%; /* Szerokość ok. 45%, elastyczne */
+    max-width: 45%;
     text-align: justify;
     font-size: 18px;
     color: #555;
     line-height: 1.6;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 20px;
 }
 
+/* Kreska oddzielająca kolumny - z lewej strony drugiej kolumny */
+.offer-column:last-child {
+    border-left: 2px solid #91627b;
+    padding-left: 30px;
+}
+
+/* Tytuły */
 .offer-column h3 {
     font-size: 30px;
     color: #91627b;
@@ -874,11 +886,7 @@
     margin-bottom: 40px;
 }
 
-.offer-column:last-child {
-    border-left: 2px solid #91627b;
-    padding-left: 50px;
-}
-
+/* Kontenery zdjęć */
 .offer-img-container {
     display: flex;
     justify-content: center;
@@ -900,41 +908,52 @@
 
 /* --- RESPONSYWNOŚĆ --- */
 
-/* Tablety i mniejsze laptopy (do 1024px) */
-@media (max-width: 1024px) {
-    .offer-container {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-        margin-top: 15px;
-    }
-
+/* Do 1400px - lekka zmiana rozmiarów i odstępów */
+@media (max-width: 1400px) {
     .offer-column {
-        width: 90%;
-        padding: 0 15px;
-        border-left: none !important; /* usuwamy kreskę przy układzie kolumnowym pionowym */
-        text-align: left;
-        font-size: 16px;
+        font-size: 17px;
     }
+    .offer-column h3 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+}
 
+/* Do 1200px */
+@media (max-width: 1200px) {
+    .offer-column {
+        font-size: 16px;
+        max-width: 48%;
+        flex-basis: 48%;
+        padding: 0 15px;
+    }
+    .offer-column:last-child {
+        padding-left: 25px;
+        border-left-width: 2px;
+    }
     .offer-column h3 {
         font-size: 26px;
         margin-bottom: 30px;
     }
+    .offer-img {
+        width: 150px;
+        height: 150px;
+        border-width: 7px;
+    }
 }
 
-/* Małe tablety i duże telefony (do 768px) */
-@media (max-width: 768px) {
+/* Do 1024px */
+@media (max-width: 1024px) {
     .offer-column {
-        font-size: 14px;
+        font-size: 15px;
+        max-width: 48%;
+        flex-basis: 48%;
         padding: 0 10px;
     }
-
     .offer-column h3 {
-        font-size: 22px;
+        font-size: 24px;
         margin-bottom: 25px;
     }
-
     .offer-img {
         width: 140px;
         height: 140px;
@@ -942,19 +961,43 @@
     }
 }
 
-/* Telefony (do 480px) */
-@media (max-width: 480px) {
+/* Do 768px */
+@media (max-width: 768px) {
+    .offer-container {
+        gap: 30px;
+    }
     .offer-column {
-        width: 100%;
-        font-size: 13px;
+        font-size: 14px;
+        max-width: 48%;
+        flex-basis: 48%;
         padding: 0 10px;
     }
-
     .offer-column h3 {
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 20px;
     }
+    .offer-img {
+        width: 130px;
+        height: 130px;
+        border-width: 6px;
+    }
+}
 
+/* Do 600px */
+@media (max-width: 600px) {
+    .offer-container {
+        gap: 20px;
+    }
+    .offer-column {
+        font-size: 13px;
+        max-width: 48%;
+        flex-basis: 48%;
+        padding: 0 8px;
+    }
+    .offer-column h3 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
     .offer-img {
         width: 120px;
         height: 120px;
@@ -962,24 +1005,50 @@
     }
 }
 
-/* Bardzo małe telefony (do 360px) */
-@media (max-width: 360px) {
+/* Do 480px */
+@media (max-width: 480px) {
+    .offer-container {
+        gap: 15px;
+    }
     .offer-column {
         font-size: 12px;
-        padding: 0 5px;
+        max-width: 48%;
+        flex-basis: 48%;
+        padding: 0 6px;
     }
-
     .offer-column h3 {
         font-size: 18px;
         margin-bottom: 15px;
     }
+    .offer-img {
+        width: 110px;
+        height: 110px;
+        border-width: 4px;
+    }
+}
 
+/* Do 360px */
+@media (max-width: 360px) {
+    .offer-container {
+        gap: 10px;
+    }
+    .offer-column {
+        font-size: 11px;
+        max-width: 48%;
+        flex-basis: 48%;
+        padding: 0 4px;
+    }
+    .offer-column h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
     .offer-img {
         width: 100px;
         height: 100px;
         border-width: 4px;
     }
 }
+
 
 
 
