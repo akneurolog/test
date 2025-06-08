@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurologopeda AK</title>
- <title>Przycisk z animacją</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurologopeda AK</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/png">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <!-- Załadowanie czcionek z Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Czcionki z Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-	
+  <style>
+    /* Reset i ogólne style */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Catchy Mager', serif;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        /* Ustawienie czcionki Catchy Mager dla całej strony */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Catchy Mager', serif;
-            background-color: #fff;
-            
-            scroll-behavior: smooth; /* Dodanie płynnego przewijania */
-        }
+    h1, h2, h3 {
+      color: #333;
+      margin: 0;
+      font-weight: 400;
+    }
 
-        h1, h2, h3 {
-            color: #333;
-            margin: 0;
-            font-weight: 400; /* Wybór pogrubionej wersji czcionki */
-        }
+    /* Style sekcji */
+    section {
+      padding: 100px 100px;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
 
-        section {
-            padding: 100px 100px; /* Zwiększenie marginesów wewnętrznych sekcji do 100px */
-            min-height: 100vh;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* Responsywne zmniejszanie paddingów */
+    @media (max-width: 1024px) {
+      section {
+        padding: 80px 40px;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: 40px 10px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      section {
+        padding: 30px 5px;
+      }
 
 
 /* Ustawienia dla nagłówka h2 w sekcji .banner - "Gabinet logopedyczny" */
