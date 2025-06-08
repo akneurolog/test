@@ -395,30 +395,10 @@
     box-sizing: border-box;
 }
 
-.section-title-bordered {
-    border-radius: 10px;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover dla większych ekranów */
-@media (min-width: 769px) {
-    .section-title-bordered:hover {
-        background-color: #91627b;
-        opacity: 1;
-        transform: scale(1.1);
-        border-radius: 10px;
-    }
-}
-
-/* Hover dla mniejszych ekranów */
-@media (max-width: 768px) {
-    .section-title-bordered:hover {
-        background-color: #91627b;
-        opacity: 1;
-        transform: none; /* bez skalowania, aby uniknąć przesunięć */
-        border-radius: 10px;
-    }
+.section-title-bordered:hover {
+    background-color: #91627b;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .image-container {
@@ -543,7 +523,7 @@
         width: 100%;
     }
     .content {
-        font-size: 12px;
+        font-size: 12px; /* Domyślnie trochę mniejszy tekst na pionowych */
         text-align: left;
         line-height: 1.4;
     }
@@ -580,6 +560,17 @@
         font-size: 10px;
     }
 }
+
+/* === NAPRAWA HOVER NA MNIEJSZYCH EKRANACH === */
+@media (max-width: 768px) {
+    .section-title-bordered:hover {
+        transform: none !important;
+        background-color: #91627b !important;
+        opacity: 1 !important;
+        border-radius: 10px !important;
+    }
+}
+
 
 
 
