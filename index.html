@@ -852,54 +852,133 @@
         }
 
         /* Nowa sekcja "Oferta" z dwiema kolumnami */
-        .offer-container {
-            display: flex;
-            justify-content: center; /* Wyśrodkowanie kolumn */
-            gap: 70px;
-            margin-top: 20px;
- 	    
-        }
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 20px;
+}
 
-        .offer-column {
-            width: 40%;
-            text-align: justify;
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
+.offer-column {
+    width: 40%;
+    text-align: justify;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
 
-        .offer-column h3 {
-            font-size: 30px; /* Większa czcionka dla tytułów */
-            color: #91627b;
-	    text-align: center; /* Wyśrodkowanie tekstu */
-            margin-bottom: 40px;
-        }
+.offer-column h3 {
+    font-size: 30px;
+    color: #91627b;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .offer-column:last-child {
-            border-left: 2px solid #91627b; /* Kreska oddzielająca kolumny */
-            padding-left: 50px;
-        }
+.offer-column:last-child {
+    border-left: 2px solid #91627b;
+    padding-left: 50px;
+}
 
-
-/* Zdjęcia w sekcji oferta Diagnoza i Terapia */
 .offer-img-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px; /* Odstęp między zdjęciem a tytułem */
-}
-/* Efekt powiększenia po najechaniu kursorem */
-.offer-img-container:hover {
-    transform: scale(1.05);  /* Powiększenie sekcji o 5% */
-    transition: transform 0.3s ease-in-out;  /* Płynna animacja powiększenia */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Stylizacja zdjęć - okrągłe z ramką - Diagnoza i Terapia */
+.offer-img-container:hover {
+    transform: scale(1.05);
+}
+
 .offer-img {
-    width: 170px; /* Szerokość zdjęcia */
-    height: 170px; /* Wysokość zdjęcia */
-    border-radius: 50%; /* Okrągły kształt */
-    border: 8px solid #91627b; /* Ramka o grubości 8px i kolorze #91627b */
-    object-fit: cover; /* Zapewnia, że zdjęcie będzie dobrze dopasowane w okrągłej ramce */
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 8px solid #91627b;
+    object-fit: cover;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+
+/* Tablety i mniejsze laptopy (do 1024px) */
+@media (max-width: 1024px) {
+    .offer-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .offer-column {
+        width: 90%;
+        padding: 0 15px;
+        border-left: none !important; /* usuwamy kreskę przy układzie kolumnowym pionowym */
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .offer-column h3 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Małe tablety i duże telefony (do 768px) */
+@media (max-width: 768px) {
+    .offer-column {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .offer-column h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .offer-img {
+        width: 140px;
+        height: 140px;
+        border-width: 6px;
+    }
+}
+
+/* Telefony (do 480px) */
+@media (max-width: 480px) {
+    .offer-column {
+        width: 100%;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .offer-column h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .offer-img {
+        width: 120px;
+        height: 120px;
+        border-width: 5px;
+    }
+}
+
+/* Bardzo małe telefony (do 360px) */
+@media (max-width: 360px) {
+    .offer-column {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+
+    .offer-column h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .offer-img {
+        width: 100px;
+        height: 100px;
+        border-width: 4px;
+    }
 }
 
 
