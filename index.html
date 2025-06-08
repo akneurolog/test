@@ -133,32 +133,95 @@
 .banner-text span:nth-child(15) { animation-delay: 2.5s; }
 .banner-text span:nth-child(16) { animation-delay: 2.6s; }
 
-/* Dodane media queries dla responsywności */
 
+/* Styl domyślny – dla największych ekranów */
+.banner h2 {
+    font-size: 80px;
+    top: -60px;
+}
+
+.banner-text {
+    top: 100px;
+    font-size: 60px;
+}
+
+/* Ekrany duże: laptopy i monitory (do 1200px) */
+@media (max-width: 1200px) {
+    .banner h2 {
+        font-size: 72px;
+        top: -55px;
+    }
+
+    .banner-text {
+        top: 110px;
+        font-size: 56px;
+    }
+}
+
+/* Ekrany średnie: tablety poziomo (do 1024px) */
+@media (max-width: 1024px) {
+    .banner h2 {
+        font-size: 66px;
+        top: -50px;
+    }
+
+    .banner-text {
+        top: 120px;
+        font-size: 52px;
+    }
+}
+
+/* Ekrany mniejsze: tablety pionowo i mniejsze laptopy (do 768px) */
 @media (max-width: 768px) {
     .banner h2 {
-        font-size: 60px; /* Zmniejszamy wielkość nagłówka na mniejszych ekranach */
-        top: -40px; /* Zmniejszamy uniesienie, aby tekst nie był za wysoko */
+        font-size: 60px;
+        top: -40px;
     }
 
     .banner-text {
-        top: 130px; /* Zwiększamy odstęp między nagłówkiem a imieniem */
-        font-size: 50px; /* Dostosowanie wielkości czcionki */
+        top: 130px;
+        font-size: 50px;
     }
 }
 
+/* Ekrany małe: telefony (do 600px) */
+@media (max-width: 600px) {
+    .banner h2 {
+        font-size: 52px;
+        top: -30px;
+    }
+
+    .banner-text {
+        top: 140px;
+        font-size: 42px;
+    }
+}
+
+/* Ekrany bardzo małe: smartfony (do 480px) */
 @media (max-width: 480px) {
     .banner h2 {
-        font-size: 45px; /* Zmniejszenie rozmiaru tekstu na małych ekranach */
-        top: -20px; /* Zmniejszamy uniesienie */
+        font-size: 45px;
+        top: -20px;
     }
 
     .banner-text {
-        top: 150px; /* Jeszcze większy odstęp na bardzo małych ekranach */
-        font-size: 36px; /* Zmniejszamy wielkość czcionki */
+        top: 150px;
+        font-size: 36px;
     }
 }
 
+/* Ekrany ekstremalnie małe: starsze telefony (do 360px) */
+@media (max-width: 360px) {
+    .banner h2 {
+        font-size: 38px;
+        top: -10px;
+    }
+
+    .banner-text {
+        top: 160px;
+        font-size: 30px;
+    }
+}
 
 
 /* Stylizacja przycisku "Zobacz ofertę" */
@@ -195,7 +258,23 @@
     animation-delay: 3s;
 }
 
-/* RESPONSYWNOŚĆ dla przycisku */
+/* Domyślne ustawienia (dla ekranów powyżej 1024px) */
+.btn-offer {
+    font-size: 18px;
+    padding: 14px 28px;
+    margin-top: 25px;
+}
+
+/* Ekrany średnie: tablety poziomo (769px - 1024px) */
+@media (max-width: 1024px) {
+    .btn-offer {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin-top: 22px;
+    }
+}
+
+/* Ekrany małe: tablety pionowo i mniejsze laptopy (do 768px) */
 @media (max-width: 768px) {
     .btn-offer {
         font-size: 14px;
@@ -204,6 +283,7 @@
     }
 }
 
+/* Ekrany bardzo małe: telefony (do 480px) */
 @media (max-width: 480px) {
     .btn-offer {
         font-size: 12px;
@@ -211,6 +291,16 @@
         margin-top: 15px;
     }
 }
+
+/* Ekrany ekstremalnie małe: starsze telefony (do 360px) */
+@media (max-width: 360px) {
+    .btn-offer {
+        font-size: 11px;
+        padding: 6px 12px;
+        margin-top: 12px;
+    }
+}
+
 
 
 /* Styl nagłówka sekcji z ramką */
@@ -283,7 +373,7 @@
 
        
 
-/* === SEKCA O MNIE – UKŁAD DOMYŚLNY (DESKTOP) === */
+/* === SEKCA O MNIE – UKŁAD DOMYŚLNY (DESKTOP >1200px) === */
 .about-section {
     display: flex;
     flex-direction: row;
@@ -296,7 +386,6 @@
     box-sizing: border-box;
 }
 
-/* Tekst */
 .content {
     width: 50%;
     text-align: justify;
@@ -306,14 +395,12 @@
     box-sizing: border-box;
 }
 
-/* Nagłówek */
 .section-title-bordered:hover {
     background-color: #91627b;
     opacity: 1;
     transform: scale(1.1);
 }
 
-/* Obrazek */
 .image-container {
     width: 50%;
     box-sizing: border-box;
@@ -324,23 +411,43 @@
     height: auto;
     border-radius: 15px;
     display: block;
-	  flex: 1;
+    flex: 1;
 }
 
-/* Hover efekt */
 .image-container:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
+/* === DUŻE EKRANY: LAPTOPY HD (do 1400px) === */
+@media (max-width: 1400px) {
+    .content {
+        font-size: 18px;
+    }
 
-/* === RESPONSYWNOŚĆ – TABLETY I TELEFONY === */
+    .section-title-bordered {
+        font-size: 24px;
+    }
+}
+
+/* === EKRANY ŚREDNIE: MAŁE LAPTOPY (do 1200px) === */
+@media (max-width: 1200px) {
+    .content {
+        font-size: 16px;
+    }
+
+    .section-title-bordered {
+        font-size: 20px;
+    }
+}
+
+/* === TABLETY (do 1024px) === */
 @media (max-width: 1024px) {
     .about-section {
         flex-direction: column;
-        align-items: flex-start;  /* tekst będzie z lewej */
-	     padding: 0 10px; /* mniejszy padding na telefonie */
-        gap: 10px;
+        align-items: flex-start;
+        padding: 0 10px;
+        gap: 20px;
     }
 
     .content,
@@ -352,15 +459,23 @@
         font-size: 14px;
         text-align: left;
     }
-
-    .image-container img {
-        max-width: 100%;
-    }
 }
 
+/* === MAŁE TABLETY / DUŻE TELEFONY (do 768px) === */
 @media (max-width: 768px) {
     .content {
         font-size: 12px;
+    }
+
+    .section-title-bordered {
+        font-size: 16px;
+    }
+}
+
+/* === WIĘKSZE TELEFONY (do 600px) === */
+@media (max-width: 600px) {
+    .content {
+        font-size: 11px;
     }
 
     .section-title-bordered {
@@ -368,6 +483,7 @@
     }
 }
 
+/* === TELEFONY (do 480px) === */
 @media (max-width: 480px) {
     .about-section {
         flex-direction: column;
@@ -395,7 +511,17 @@
     }
 }
 
+/* === BARDZO MAŁE TELEFONY (do 360px) === */
+@media (max-width: 360px) {
+    .content {
+        font-size: 9px;
+    }
+
+    .section-title-bordered {
+        font-size: 10px;
+    }
 }
+
 
 
 
@@ -429,6 +555,14 @@
     padding: 10px 0;
 }
 
+/* Jeśli masz kontener wokół paska, to również powinieneś ustawić max-width */
+.sticky-navbar-container {
+    max-width: 100%; /* Kontener nawigacji */
+    margin: 0 auto; /* Centrowanie paska nawigacyjnego */
+}
+
+
+	    
 /* Ukrycie paska nawigacyjnego */
 .sticky-navbar.hidden {
     opacity: 0;
@@ -449,12 +583,12 @@
 /* Linki nawigacyjne */
 .nav-link {
     color: #91627b;
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 10px;
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 20px;
     white-space: nowrap;
 }
 
@@ -468,7 +602,7 @@
 
 
 .logo {
-    height: 80px;
+    height: 100px;
     width: auto;
     margin-right: 20px;
     vertical-align: middle;
@@ -476,81 +610,164 @@
 
 
 	    
-	    /* Dodajemy styl dla kliknięcia (focus) na małych ekranach */
-@media (max-width: 768px) {
-    .nav-link:focus {
-        border: 1px solid #91627b; /* Zmniejszamy obramowanie do 1px po kliknięciu */
-        padding: 8px 15px; /* Zmniejszamy padding dla lepszego dopasowania */
+	  /* === DOMYŚLNY STYL (dla ekranów powyżej 1440px) === */
+.logo {
+    height: 100px;
+}
+
+.sticky-navbar {
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin: 0 15px;
+    padding: 10px 20px;
+}
+
+/* === BARDZO DUŻE EKRANY: 1920px i więcej === */
+@media (min-width: 1920px) {
+    .logo {
+        height: 120px;
     }
 
+    .sticky-navbar {
+        font-size: 20px;
+        padding: 18px 35px;
+    }
 
-	/* Responsive */
+    .nav-link {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
 
-
-@media (min-width: 1441px) {
+/* === DUŻE EKRANY: 1441px - 1919px === */
+@media (min-width: 1441px) and (max-width: 1919px) {
     .logo {
         height: 100px;
     }
 }
 
-	
+/* === ŚREDNIE LAPTOPY: 1201px - 1440px === */
+@media (max-width: 1440px) {
+    .logo {
+        height: 90px;
+    }
+
+    .sticky-navbar {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* === MAŁE LAPTOPY I TABLETY POZIOMO: do 1200px === */
+@media (max-width: 1200px) {
+    .logo {
+        height: 85px;
+    }
+
+    .sticky-navbar {
+        font-size: 15px;
+        padding: 13px 25px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+}
+
+/* === TABLETY I MAŁE LAPTOPY: do 1024px === */
 @media (max-width: 1024px) {
     .sticky-navbar {
         font-size: 14px;
         padding: 12px 25px;
     }
+
     .nav-links {
         justify-content: center;
     }
+
     .nav-link {
         font-size: 14px;
         margin: 0 10px;
         padding: 8px 15px;
     }
+
     .logo {
         height: 80px;
     }
 }
 
+/* === TABLETY PIONOWO: do 768px === */
 @media (max-width: 768px) {
     .sticky-navbar {
         padding: 10px 15px;
         font-size: 12px;
     }
+
     .nav-links {
         display: flex;
         justify-content: center;
         width: 100%;
         text-align: center;
     }
+
     .nav-link {
         margin: 0 8px;
         font-size: 10px;
         padding: 6px 12px;
     }
+
     .logo {
         height: 60px;
     }
+
+    /* Styl dla kliknięcia (focus) na małych ekranach */
+    .nav-link:focus {
+        border: 1px solid #91627b;
+        padding: 8px 15px;
+    }
 }
 
+/* === TELEFONY: do 480px === */
 @media (max-width: 480px) {
     .sticky-navbar {
         padding: 10px 10px;
     }
+
     .nav-links {
         margin-top: 10px;
     }
+
     .nav-link {
         padding: 4px 8px;
         font-size: 8px;
     }
+
     .logo {
         height: 50px;
     }
 }
 
+/* === MAŁE TELEFONY: do 360px === */
+@media (max-width: 360px) {
+    .nav-link {
+        font-size: 7px;
+        padding: 3px 6px;
+    }
 
-
+    .logo {
+        height: 40px;
+    }
+}
 
 
 
