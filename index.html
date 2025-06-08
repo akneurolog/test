@@ -458,6 +458,11 @@
 
 /* --- MAŁE TABLETY / DUŻE TELEFONY --- */
 @media (max-width: 768px) {
+    .about-section {
+        margin-top: 20px; /* mniejszy odstęp u góry na małych ekranach */
+        margin-bottom: 20px; /* dół też */
+        padding: 0 15px; /* lekko zmniejszony padding */
+    }
     .content {
         font-size: 12px;
     }
@@ -558,16 +563,6 @@
     }
     .section-title-bordered {
         font-size: 10px;
-    }
-}
-
-/* === NAPRAWA HOVER NA MNIEJSZYCH EKRANACH === */
-@media (max-width: 768px) {
-    .section-title-bordered:hover {
-        transform: none !important;
-        background-color: #91627b !important;
-        opacity: 1 !important;
-        border-radius: 10px !important;
     }
 }
 
