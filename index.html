@@ -459,25 +459,25 @@
 /* --- MAŁE TABLETY / DUŻE TELEFONY --- */
 @media (max-width: 768px) {
     .about-section {
-        margin-top: 20px; /* mniejszy odstęp u góry na małych ekranach */
-        margin-bottom: 20px; /* dół też */
-        padding: 0 15px; /* lekko zmniejszony padding */
+        margin-top: 25px; /* trochę większy odstęp u góry */
+        margin-bottom: 25px; /* dół też */
+        padding: 0 20px; /* trochę większy padding */
     }
     .content {
-        font-size: 12px;
+        font-size: 14px; /* zwiększone z 12px */
     }
     .section-title-bordered {
-        font-size: 16px;
+        font-size: 18px; /* zwiększone z 16px */
     }
 }
 
 /* --- WIĘKSZE TELEFONY --- */
 @media (max-width: 600px) {
     .content {
-        font-size: 11px;
+        font-size: 13px; /* zwiększone z 11px */
     }
     .section-title-bordered {
-        font-size: 14px;
+        font-size: 16px; /* zwiększone z 14px */
     }
 }
 
@@ -486,32 +486,32 @@
     .about-section {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
-        padding: 0 10px;
+        gap: 12px; /* trochę więcej odstępu */
+        padding: 0 15px; /* większy padding */
     }
     .content,
     .image-container {
         width: 100%;
     }
     .content {
-        font-size: 10px;
+        font-size: 12px; /* zwiększone z 10px */
         text-align: left;
     }
     .image-container img {
         width: 100%;
     }
     .section-title-bordered {
-        font-size: 12px;
+        font-size: 14px; /* zwiększone z 12px */
     }
 }
 
 /* --- BARDZO MAŁE TELEFONY --- */
 @media (max-width: 360px) {
     .content {
-        font-size: 9px;
+        font-size: 10px; /* zwiększone z 9px */
     }
     .section-title-bordered {
-        font-size: 10px;
+        font-size: 12px; /* zwiększone z 10px */
     }
 }
 
@@ -520,51 +520,52 @@
     .about-section {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
-        padding: 0 15px;
+        gap: 18px; /* zwiększony odstęp */
+        padding: 0 20px; /* większy padding */
     }
     .content,
     .image-container {
         width: 100%;
     }
     .content {
-        font-size: 12px; /* Domyślnie trochę mniejszy tekst na pionowych */
+        font-size: 14px; /* zwiększone z 12px */
         text-align: left;
-        line-height: 1.4;
+        line-height: 1.5; /* nieco większa wysokość linii */
     }
     .image-container img {
-        border-radius: 10px;
+        border-radius: 12px; /* trochę większe zaokrąglenie */
         width: 100%;
         height: auto;
     }
     .section-title-bordered {
-        font-size: 14px;
+        font-size: 16px; /* zwiększone z 14px */
     }
 }
 
 /* --- Jeszcze bardziej doprecyzowane dla bardzo wąskich pionowych ekranów --- */
 @media (max-width: 480px) and (orientation: portrait) {
     .content {
-        font-size: 10px;
-        line-height: 1.3;
+        font-size: 12px; /* zwiększone z 10px */
+        line-height: 1.4; /* trochę większy line-height */
     }
     .section-title-bordered {
-        font-size: 12px;
+        font-size: 14px; /* zwiększone z 12px */
     }
     .about-section {
-        gap: 10px;
-        padding: 0 10px;
+        gap: 12px; /* większy odstęp */
+        padding: 0 15px; /* większy padding */
     }
 }
 
 @media (max-width: 360px) and (orientation: portrait) {
     .content {
-        font-size: 9px;
+        font-size: 11px; /* zwiększone z 9px */
     }
     .section-title-bordered {
-        font-size: 10px;
+        font-size: 12px; /* zwiększone z 10px */
     }
 }
+
 
 
 
