@@ -419,124 +419,147 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* === DUŻE EKRANY: LAPTOPY HD (do 1400px) === */
+/* --- DUŻE EKRANY --- */
 @media (max-width: 1400px) {
     .content {
         font-size: 18px;
-        text-align: justify; /* zachowujemy justyfikację */
     }
-
     .section-title-bordered {
         font-size: 24px;
-        text-align: left; /* wymuszamy wyrównanie do lewej */
     }
 }
 
-/* === EKRANY ŚREDNIE: MAŁE LAPTOPY (do 1200px) === */
 @media (max-width: 1200px) {
     .content {
         font-size: 16px;
-        text-align: justify;
     }
-
     .section-title-bordered {
         font-size: 20px;
+    }
+}
+
+/* --- TABLETY --- */
+@media (max-width: 1024px) {
+    .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+        gap: 20px;
+    }
+    .content,
+    .image-container {
+        width: 100%;
+    }
+    .content {
+        font-size: 14px;
         text-align: left;
     }
 }
 
-/* === TABLETY (do 1024px) === */
-@media (max-width: 1024px) {
-    .about-section {
-        flex-direction: column;
-        align-items: flex-start; /* ważne! */
-        padding: 0 10px;
-        gap: 20px;
-    }
-
-    .content,
-    .image-container {
-        width: 100%;
-    }
-
-    .content {
-        font-size: 14px;
-        text-align: left; /* ważne! */
-    }
-
-    .section-title-bordered {
-        text-align: left; /* dodane */
-    }
-}
-
-/* === MAŁE TABLETY / DUŻE TELEFONY (do 768px) === */
+/* --- MAŁE TABLETY / DUŻE TELEFONY --- */
 @media (max-width: 768px) {
     .content {
         font-size: 12px;
-        text-align: left; /* dodane */
     }
-
     .section-title-bordered {
         font-size: 16px;
-        text-align: left; /* dodane */
     }
 }
 
-/* === WIĘKSZE TELEFONY (do 600px) === */
+/* --- WIĘKSZE TELEFONY --- */
 @media (max-width: 600px) {
     .content {
         font-size: 11px;
-        text-align: left; /* dodane */
     }
-
     .section-title-bordered {
         font-size: 14px;
-        text-align: left; /* dodane */
     }
 }
 
-/* === TELEFONY (do 480px) === */
+/* --- TELEFONY --- */
 @media (max-width: 480px) {
     .about-section {
         flex-direction: column;
-        align-items: flex-start; /* ważne! */
+        align-items: flex-start;
         gap: 10px;
         padding: 0 10px;
     }
-
     .content,
     .image-container {
         width: 100%;
     }
-
     .content {
         font-size: 10px;
-        text-align: left; /* ważne! */
+        text-align: left;
     }
-
     .image-container img {
         width: 100%;
     }
-
     .section-title-bordered {
         font-size: 12px;
-        text-align: left; /* dodane */
     }
 }
 
-/* === BARDZO MAŁE TELEFONY (do 360px) === */
+/* --- BARDZO MAŁE TELEFONY --- */
 @media (max-width: 360px) {
     .content {
         font-size: 9px;
-        text-align: left; /* dodane */
     }
-
     .section-title-bordered {
         font-size: 10px;
-        text-align: left; /* dodane */
     }
 }
 
+/* --- DODATKOWE STYLES DLA WSZYSTKICH EKRANÓW W ORIENTACJI PIONOWEJ --- */
+@media (orientation: portrait) {
+    .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    .content,
+    .image-container {
+        width: 100%;
+    }
+    .content {
+        font-size: 12px; /* Domyślnie trochę mniejszy tekst na pionowych */
+        text-align: left;
+        line-height: 1.4;
+    }
+    .image-container img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .section-title-bordered {
+        font-size: 14px;
+    }
+}
+
+/* --- Jeszcze bardziej doprecyzowane dla bardzo wąskich pionowych ekranów --- */
+@media (max-width: 480px) and (orientation: portrait) {
+    .content {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    .section-title-bordered {
+        font-size: 12px;
+    }
+    .about-section {
+        gap: 10px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+    .content {
+        font-size: 9px;
+    }
+    .section-title-bordered {
+        font-size: 10px;
+    }
+}
 
 
 
