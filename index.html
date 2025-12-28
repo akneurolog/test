@@ -797,6 +797,182 @@ iframe {
     margin-bottom: 20px; /* Dodanie marginesu u dołu */
 }
 
+/* =========================
+   TABLET (max 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  section {
+    padding: 60px 40px;
+    min-height: auto;
+  }
+
+  .about-section,
+  .offer-container,
+  .image-text-section,
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .content,
+  .image-container,
+  .offer-column,
+  .text-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .banner h2 {
+    font-size: 60px;
+    top: -40px;
+  }
+
+  .banner-text {
+    font-size: 45px;
+    top: 70px;
+  }
+
+  .offer-column:last-child {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+/* =========================
+   MOBILE (max 768px)
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  /* NAVBAR */
+  .sticky-navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .logo {
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  /* BANNER */
+  .banner {
+    padding-top: 100px;
+  }
+
+  .banner h2 {
+    font-size: 38px;
+    top: -20px;
+  }
+
+  .banner-text {
+    font-size: 32px;
+    top: 40px;
+  }
+
+  .btn-offer {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  /* O MNIE */
+  .content {
+    font-size: 18px;
+  }
+
+  /* OFERTA */
+  .offer-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .offer-column h3 {
+    font-size: 24px;
+  }
+
+  /* SPECJALIZACJE */
+  .pink-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .pink-section h2 {
+    font-size: 28px;
+  }
+
+  .pink-section p {
+    font-size: 18px;
+  }
+
+  /* IMAGE + TEXT */
+  .image-text-section {
+    margin: 0;
+    padding: 30px 20px;
+  }
+
+  .text-container h2 {
+    font-size: 22px;
+  }
+
+  .text-container p {
+    font-size: 16px;
+  }
+
+  /* KONTAKT */
+  .contact-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (max 480px)
+========================= */
+@media (max-width: 480px) {
+
+  .banner h2 {
+    font-size: 30px;
+  }
+
+  .banner-text {
+    font-size: 26px;
+  }
+
+  .section-title-bordered {
+    font-size: 22px;
+    padding: 8px 14px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+
+  .btn-see-pricing {
+    font-size: 18px;
+  }
+}
 
     </style>
 </head>
@@ -1189,4 +1365,5 @@ window.addEventListener('scroll', function() {
 
 </body>
 </html>
+
 
