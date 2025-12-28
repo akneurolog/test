@@ -55,32 +55,7 @@
     transform: translateY(0);
   }
 
-  /* Responsywność */
-  @media (max-width: 1024px) {
-    section {
-      padding: 80px 30px;
-      flex-direction: column;
-    }
-  }
-
-  @media (max-width: 768px) {
-    section {
-      padding: 60px 15px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    section {
-      padding: 40px 8px;
-    }
-  }
-
-  @media (max-width: 360px) {
-    section {
-      padding: 30px 4px;
-    }
-  }
-
+  
   /* Nadpisania dla wrapperów nadrzędnych */
   .container, .wrapper, .main, main {
     margin: 0 !important;
@@ -187,83 +162,6 @@
     font-size: 60px;
 }
 
-/* Ekrany duże: laptopy i monitory (do 1200px) */
-@media (max-width: 1200px) {
-    .banner h2 {
-        font-size: 72px;
-        top: -55px;
-    }
-
-    .banner-text {
-        top: 110px;
-        font-size: 56px;
-    }
-}
-
-/* Ekrany średnie: tablety poziomo (do 1024px) */
-@media (max-width: 1024px) {
-    .banner h2 {
-        font-size: 66px;
-        top: -50px;
-    }
-
-    .banner-text {
-        top: 120px;
-        font-size: 52px;
-    }
-}
-
-/* Ekrany mniejsze: tablety pionowo i mniejsze laptopy (do 768px) */
-@media (max-width: 768px) {
-    .banner h2 {
-        font-size: 60px;
-        top: -40px;
-    }
-
-    .banner-text {
-        top: 130px;
-        font-size: 50px;
-    }
-}
-
-/* Ekrany małe: telefony (do 600px) */
-@media (max-width: 600px) {
-    .banner h2 {
-        font-size: 52px;
-        top: -30px;
-    }
-
-    .banner-text {
-        top: 140px;
-        font-size: 42px;
-    }
-}
-
-/* Ekrany bardzo małe: smartfony (do 480px) */
-@media (max-width: 480px) {
-    .banner h2 {
-        font-size: 45px;
-        top: -20px;
-    }
-
-    .banner-text {
-        top: 150px;
-        font-size: 36px;
-    }
-}
-
-/* Ekrany ekstremalnie małe: starsze telefony (do 360px) */
-@media (max-width: 360px) {
-    .banner h2 {
-        font-size: 38px;
-        top: -10px;
-    }
-
-    .banner-text {
-        top: 160px;
-        font-size: 30px;
-    }
-}
 
 
 /* Stylizacja przycisku "Zobacz ofertę" */
@@ -307,42 +205,6 @@
     margin-top: 25px;
 }
 
-/* Ekrany średnie: tablety poziomo (769px - 1024px) */
-@media (max-width: 1024px) {
-    .btn-offer {
-        font-size: 16px;
-        padding: 12px 24px;
-        margin-top: 22px;
-    }
-}
-
-/* Ekrany małe: tablety pionowo i mniejsze laptopy (do 768px) */
-@media (max-width: 768px) {
-    .btn-offer {
-        font-size: 14px;
-        padding: 10px 20px;
-        margin-top: 20px;
-    }
-}
-
-/* Ekrany bardzo małe: telefony (do 480px) */
-@media (max-width: 480px) {
-    .btn-offer {
-        font-size: 12px;
-        padding: 8px 16px;
-        margin-top: 15px;
-    }
-}
-
-/* Ekrany ekstremalnie małe: starsze telefony (do 360px) */
-@media (max-width: 360px) {
-    .btn-offer {
-        font-size: 11px;
-        padding: 6px 12px;
-        margin-top: 12px;
-    }
-}
-
 
 
 /* Styl nagłówka sekcji z ramką */
@@ -361,56 +223,6 @@
     top: 0;              /* Usunięto top: 50px */
 }
 
-/* RESPONSYWNOŚĆ: Styl dla telefonów i tabletów */
-@media (max-width: 768px) {
-    .banner {
-        padding-top: 60px;
-        min-height: auto;
-    }
-
-    .banner h2 {
-        font-size: 40px;
-        top: 0;
-        padding: 0 10px;
-    }
-
-    .banner-text {
-        font-size: 28px;
-        top: 20px;
-        flex-wrap: wrap;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .btn-offer {
-        font-size: 18px;
-        padding: 10px 20px;
-        margin-top: 20px;
-    }
-
-    .section-title-bordered {
-        font-size: 16px;
-        padding: 6px 12px;
-        width: 100%; /* Zmieniono z max-content na 100% */
-        text-align: center; /* Wycentrowanie tekstu na małych ekranach */
-        border-radius: 0; /* Zmieniono, aby dostosować wygląd */
-        left: 0;   /* Zapewnia pełną szerokość */
-        top: 0;    /* Zapewnia, że jest na górze */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-title-bordered {
-        font-size: 14px; /* Dostosowanie jeszcze mniejszego rozmiaru tekstu */
-        padding: 5px 10px;
-    }
-}
-
-
-	    
-
-
-	    
 
 
        
@@ -460,189 +272,6 @@
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
-
-/* --- DUŻE EKRANY --- */
-@media (max-width: 1400px) {
-    .content {
-        font-size: 18px;
-    }
-    .section-title-bordered {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .content {
-        font-size: 16px;
-    }
-    .section-title-bordered {
-        font-size: 20px;
-    }
-}
-
-/* --- TABLETY --- */
-@media (max-width: 1024px) {
-    .about-section {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 10px;
-        gap: 20px;
-    }
-    .content,
-    .image-container {
-        width: 100%;
-    }
-    .content {
-        font-size: 14px;
-        text-align: left;
-    }
-}
-
-/* --- MAŁE TABLETY / DUŻE TELEFONY --- */
-@media (max-width: 768px) {
-    .about-section {
-        margin-top: 20px; /* mniejszy odstęp u góry na małych ekranach */
-        margin-bottom: 20px; /* dół też */
-        padding: 0 15px; /* lekko zmniejszony padding */
-    }
-    .content {
-        font-size: 12px;
-    }
-    .section-title-bordered {
-        font-size: 16px;
-    }
-}
-
-/* --- WIĘKSZE TELEFONY --- */
-@media (max-width: 600px) {
-    .content {
-        font-size: 11px;
-    }
-    .section-title-bordered {
-        font-size: 14px;
-    }
-}
-
-/* --- TELEFONY --- */
-@media (max-width: 480px) {
-    .about-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 0 10px;
-    }
-    .content,
-    .image-container {
-        width: 100%;
-    }
-    .content {
-        font-size: 10px;
-        text-align: left;
-    }
-    .image-container img {
-        width: 100%;
-    }
-    .section-title-bordered {
-        font-size: 12px;
-    }
-}
-
-/* --- BARDZO MAŁE TELEFONY --- */
-@media (max-width: 360px) {
-    .content {
-        font-size: 9px;
-    }
-    .section-title-bordered {
-        font-size: 10px;
-    }
-}
-
-/* --- DODATKOWE STYLES DLA WSZYSTKICH EKRANÓW W ORIENTACJI PIONOWEJ --- */
-@media (orientation: portrait) {
-    .about-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        padding: 0 15px;
-    }
-    .content,
-    .image-container {
-        width: 100%;
-    }
-    .content {
-        font-size: 12px; /* Domyślnie trochę mniejszy tekst na pionowych */
-        text-align: left;
-        line-height: 1.4;
-    }
-    .image-container img {
-        border-radius: 10px;
-        width: 100%;
-        height: auto;
-    }
-    .section-title-bordered {
-        font-size: 14px;
-    }
-}
-
-/* --- Jeszcze bardziej doprecyzowane dla bardzo wąskich pionowych ekranów --- */
-@media (max-width: 480px) and (orientation: portrait) {
-    .content {
-        font-size: 10px;
-        line-height: 1.3;
-    }
-    .section-title-bordered {
-        font-size: 12px;
-    }
-    .about-section {
-        gap: 10px;
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 360px) and (orientation: portrait) {
-    .content {
-        font-size: 9px;
-    }
-    .section-title-bordered {
-        font-size: 10px;
-    }
-}
-
-/* === DODATKOWA KOREKTA MARGINESÓW I PADDINGÓW NA MAŁYCH EKRANACH - PEŁNA SZEROKOŚĆ === */
-@media (max-width: 768px) {
-  .about-section {
-    margin: 0 !important;
-    max-width: 100% !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    margin: 0 !important;
-    max-width: 100% !important;
-    padding-left: 3px !important;
-    padding-right: 3px !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .about-section {
-    margin: 0 !important;
-    max-width: 100% !important;
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-  }
-}
-
-
-
-
-
-
-
-	    
 
 	    
 
@@ -741,152 +370,7 @@
     padding: 10px 20px;
 }
 
-/* === BARDZO DUŻE EKRANY: 1920px i więcej === */
-@media (min-width: 1920px) {
-    .logo {
-        height: 120px;
-    }
 
-    .sticky-navbar {
-        font-size: 20px;
-        padding: 18px 35px;
-    }
-
-    .nav-link {
-        font-size: 18px;
-        padding: 12px 24px;
-    }
-}
-
-/* === DUŻE EKRANY: 1441px - 1919px === */
-@media (min-width: 1441px) and (max-width: 1919px) {
-    .logo {
-        height: 100px;
-    }
-}
-
-/* === ŚREDNIE LAPTOPY: 1201px - 1440px === */
-@media (max-width: 1440px) {
-    .logo {
-        height: 90px;
-    }
-
-    .sticky-navbar {
-        font-size: 16px;
-        padding: 14px 28px;
-    }
-
-    .nav-link {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
-/* === MAŁE LAPTOPY I TABLETY POZIOMO: do 1200px === */
-@media (max-width: 1200px) {
-    .logo {
-        height: 85px;
-    }
-
-    .sticky-navbar {
-        font-size: 15px;
-        padding: 13px 25px;
-    }
-
-    .nav-link {
-        font-size: 13px;
-        padding: 7px 14px;
-    }
-}
-
-/* === TABLETY I MAŁE LAPTOPY: do 1024px === */
-@media (max-width: 1024px) {
-    .sticky-navbar {
-        font-size: 14px;
-        padding: 12px 25px;
-    }
-
-    .nav-links {
-        justify-content: center;
-    }
-
-    .nav-link {
-        font-size: 14px;
-        margin: 0 10px;
-        padding: 8px 15px;
-    }
-
-    .logo {
-        height: 80px;
-    }
-}
-
-/* === TABLETY PIONOWO: do 768px === */
-@media (max-width: 768px) {
-    .sticky-navbar {
-        padding: 10px 15px;
-        font-size: 12px;
-    }
-
-    .nav-links {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-link {
-        margin: 0 8px;
-        font-size: 10px;
-        padding: 6px 12px;
-    }
-
-    .logo {
-        height: 60px;
-    }
-
-    /* Styl dla kliknięcia (focus) na małych ekranach */
-    .nav-link:focus {
-        border: 1px solid #91627b;
-        padding: 8px 15px;
-    }
-}
-
-/* === TELEFONY: do 480px === */
-@media (max-width: 480px) {
-    .sticky-navbar {
-        padding: 10px 10px;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-    }
-
-    .nav-link {
-        padding: 4px 8px;
-        font-size: 8px;
-    }
-
-    .logo {
-        height: 50px;
-    }
-}
-
-/* === MAŁE TELEFONY: do 360px === */
-@media (max-width: 360px) {
-    .nav-link {
-        font-size: 7px;
-        padding: 3px 6px;
-    }
-
-    .logo {
-        height: 40px;
-    }
-}
-
-
-
-	
         /* Strzałka na dole prawej strony */
         .scroll-to-top {
             position: fixed;
@@ -974,102 +458,6 @@
     border: 7px solid #91627b;
     object-fit: cover;
 }
-
-/* --- Responsywność --- */
-
-@media (max-width: 1200px) {
-    .offer-column {
-        width: 38%;
-        font-size: 16px;
-        padding: 0 12px;
-    }
-    .offer-column:last-child {
-        padding-left: 25px;
-    }
-    .offer-column h3 {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-    .offer-img {
-        width: 130px;
-        height: 130px;
-        border-width: 6px;
-    }
-    .offer-container {
-        gap: 50px;
-    }
-}
-
-@media (max-width: 900px) {
-    .offer-column {
-        width: 36%;
-        font-size: 15px;
-        padding: 0 10px;
-    }
-    .offer-column:last-child {
-        padding-left: 20px;
-    }
-    .offer-column h3 {
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
-    .offer-img {
-        width: 120px;
-        height: 120px;
-        border-width: 5px;
-    }
-    .offer-container {
-        gap: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-    .offer-column {
-        width: 35%;
-        font-size: 14px;
-        padding: 0 8px;
-    }
-    .offer-column:last-child {
-        padding-left: 18px;
-    }
-    .offer-column h3 {
-        font-size: 20px;
-        margin-bottom: 18px;
-    }
-    .offer-img {
-        width: 110px;
-        height: 110px;
-        border-width: 4px;
-    }
-    .offer-container {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .offer-column {
-        width: 34%;
-        font-size: 13px;
-        padding: 0 6px;
-    }
-    .offer-column:last-child {
-        padding-left: 15px;
-    }
-    .offer-column h3 {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    .offer-img {
-        width: 100px;
-        height: 100px;
-        border-width: 4px;
-    }
-    .offer-container {
-        gap: 25px;
-    }
-}
-
-
 
 
 
@@ -1204,34 +592,6 @@ font-family: 'Dancing Script', cursive;
     transform: scale(1.05); /* Efekt powiększenia przycisku */
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
-    #payments {
-        padding: 30px 20px; /* Zmniejszenie paddingu */
-        flex-direction: column; /* Ustawienie elementów w kolumnie */
-        gap: 20px; /* Odstęp między elementami */
-    }
-
-    .content-container h2 {
-        font-size: 24px; /* Mniejszy rozmiar czcionki nagłówka na małych ekranach */
-    }
-
-    .content-container p {
-        font-size: 14px; /* Mniejszy rozmiar czcionki */
-        max-width: 100%; /* Rozciągnięcie tekstu na pełną szerokość */
-    }
-
-    .pricing-content {
-        width: 90%; /* Szerokość banera na małych ekranach */
-    }
-
-    .btn-see-pricing {
-        padding: 12px 30px; /* Mniejsze przyciski na małych ekranach */
-        font-size: 16px; /* Mniejszy rozmiar czcionki */
-    }
-}
-
-
 
 
 /* Sekcja SPECJALIZACJE o różowym tle */
@@ -1332,21 +692,6 @@ font-family: 'Dancing Script', cursive;
   line-height: 1.6;  /* Lepsza czytelność tekstu */
 }
 
-@media (max-width: 768px) {
-  .image-text-section {
-    flex-direction: column;  /* Na urządzeniach mobilnych obrazek i tekst będą w kolumnie */
-    gap: 20px; /* Odstęp między zdjęciem a tekstem */
-  }
-
-  .image-container img {
-    width: 100%;  /* Obrazek wypełnia całą szerokość */
-  }
-
-  .image-text-section {
-    margin-left: 0;  /* Usunięcie marginesu z lewej strony na mniejszych ekranach */
-    margin-right: 0;  /* Usunięcie marginesu z prawej strony na mniejszych ekranach */
-  }
-}
 
 /* Styl dla sekcji Oferta 2 .image-text-section ANIMACJE */
 .image-text-section {
@@ -1451,24 +796,6 @@ iframe {
     margin-top: 20px; /* Dodanie marginesu u góry */
     margin-bottom: 20px; /* Dodanie marginesu u dołu */
 }
-
-
-/* Zapewnienie, że na małych ekranach elementy będą miały odpowiednią szerokość */
-
-@media (max-width: 768px) {
-  .contact-item {
-    width: 45%; /* Zwiększenie szerokości na mniejszych ekranach */
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-item {
-    width: 100%; /* Cała szerokość na najwęższych ekranach */
-  }
-}
-
-
-
 
 
     </style>
@@ -1862,3 +1189,4 @@ window.addEventListener('scroll', function() {
 
 </body>
 </html>
+
