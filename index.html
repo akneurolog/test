@@ -540,7 +540,8 @@ font-family: 'Dancing Script', cursive;
 
 .pricing-content h3 {
     font-size: 26px; /* Rozmiar nagłówka */
-    color: #333333; /* Kolor ciemnoszary */
+font-family: 'Dancing Script', cursive;
+    color: #91627B; /* Kolor ciemnoszary */
     margin-bottom: 20px;
     font-weight: bold; /* Pogrubienie nagłówka */
 }
@@ -736,11 +737,15 @@ font-family: 'Dancing Script', cursive;
     transform: translateY(50px); /* Sekcja lekko przesuwa się w dół */
 }
 
+
+
+
 /* Sekcja Kontakt */
 #contact {
   padding: 10px 0;
   background-color: rgba(206, 182, 195, 0.7); /* Tło #ceb6c3 z 70% nieprzezroczystości */
   text-align: center;
+  min-height: 1000px; /* Dodanie minimalnej wysokości */
 }
 
 .contact-container {
@@ -750,6 +755,8 @@ font-family: 'Dancing Script', cursive;
   flex-wrap: wrap; /* Umożliwia zawijanie się banerów przy mniejszych ekranach */
   margin: 0 auto; /* Wyśrodkowanie kontenera */
   max-width: 1200px; /* Marginesy 100px z każdej strony */
+  width: 100%; /* Upewnij się, że kontener ma 100% szerokości */
+  box-sizing: border-box; /* Dla lepszego zarządzania szerokością */
 }
 
 .contact-item {
@@ -810,17 +817,17 @@ font-family: 'Dancing Script', cursive;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+iframe {
+    margin-top: 20px; /* Dodanie marginesu u góry */
+    margin-bottom: 20px; /* Dodanie marginesu u dołu */
+}
+
+
 /* Zapewnienie, że na małych ekranach elementy będą miały odpowiednią szerokość */
 
 @media (max-width: 768px) {
   .contact-item {
-    width: 40%; /* Zwiększenie szerokości na mniejszych ekranach */
-  }
-}
-
-@media (max-width: 640px) {
-  .contact-item {
-    width: 50%; /* Zmiana szerokości dla średnich ekranów */
+    width: 45%; /* Zwiększenie szerokości na mniejszych ekranach */
   }
 }
 
@@ -959,7 +966,9 @@ Jeśli Ty lub Twoje dziecko zmagacie się z trudnościami w komunikacji, zaprasz
 </div>
 
 
-    <!-- Sekcja Kontakt -->
+
+
+  <!-- Sekcja Kontakt -->
 <section id="contact">
     <div class="section-title-bordered">
         Kontakt
@@ -985,7 +994,18 @@ Jeśli Ty lub Twoje dziecko zmagacie się z trudnościami w komunikacji, zaprasz
             <h3>Social Media</h3>
             <p><a href="https://www.instagram.com" target="_blank">Instagram</a>, <a href="https://www.facebook.com" target="_blank">Facebook</a></p>
         </div>
-    </div>
+
+        <!-- Osadzona Mapa Google -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.7052244422334!2d17.891024577005457!3d54.3445180725956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fded51c6ff5c11%3A0x750db44676330333!2sKartuska%204%2C%2083-340%20Sierakowice!5e0!3m2!1spl!2spl!4v1742460867402!5m2!1spl!2spl" 
+            width="100%" 
+            height="380" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
 </section>
 
 
