@@ -1,314 +1,290 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurologopeda AK</title>
- <title>Przycisk z animacją</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurologopeda AK</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/png">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <!-- Załadowanie czcionek z Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Czcionki z Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
+  <style>
+   <style>
+  /* Reset i ogólne style */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Catchy Mager', serif;
+    background-color: #fff;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+  }
 
-    <style>
-        /* Ustawienie czcionki Catchy Mager dla całej strony */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Catchy Mager', serif;
-            background-color: #fff;
-            
-            scroll-behavior: smooth; /* Dodanie płynnego przewijania */
-        }
+  h1, h2, h3 {
+    color: #333;
+    margin: 0;
+    font-weight: 400;
+  }
 
-        h1, h2, h3 {
-            color: #333;
-            margin: 0;
-            font-weight: 400; /* Wybór pogrubionej wersji czcionki */
-        }
+  /* Sekcje */
+  section {
+    padding: 100px 100px;
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
-        section {
-            padding: 100px 100px; /* Zwiększenie marginesów wewnętrznych sekcji do 100px */
-            min-height: 100vh;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+	 /* Nadpisania dla wrapperów nadrzędnych */
+  .container, .wrapper, .main, main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
 
-
-
-        /* Ustawienia dla nagłówka h2 w sekcji .banner - "Gabinet logopedyczny"*/
+/* Ustawienia dla nagłówka h2 w sekcji .banner - "Gabinet logopedyczny" */
 .banner h2 {
-    color: white; /* Kolor tekstu na biały */
-    font-family: 'Times New Roman', sans-serif; /* Ustawienie czcionki TNR */
-    font-size: 130px; /* Możesz dostosować rozmiar czcionki */
+    color: white;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 130px;
     margin: 0;
     animation: fadeIn 2s ease-out;
-    position: relative; /* Pozwala na przesunięcie nagłówka */
-    top: -80px; /* Podnosi tekst o 80px w górę */
+    position: relative;
+    top: -80px;
 }
 
-        /* Sekcja Banner */
+/* Sekcja Banner */
 .banner {
     position: relative;
     width: 100%;
-    height: 60vh; /* Zmniejszenie wysokości tła do 60% wysokości okna */
-    background-image: url('images/background.jpg'); /* Ścieżka do zdjęcia w folderze images */
-    background-size: cover; /* Dopasowanie obrazu do tła sekcji */
-    background-position: center; /* Ustawienie obrazu na środku */
+    min-height: 60vh; /* Zmieniono z height na min-height */
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding-top: 130px; /* Dostosowanie położenia tekstu w pionie */
+    padding-top: 130px;
     font-size: 100px;
-    opacity: 1; /* Początkowa pełna przezroczystość */
-    transform: translateY(0); /* Początkowa pozycja */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Płynna animacja zmiany */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Kiedy sekcja nie jest widoczna, ma zanikać i przesuwać się w górę */
 .banner.hidden {
-    opacity: 0; /* Znikanie sekcji */
-    transform: translateY(-50px); /* Przesunięcie sekcji w górę */
+    opacity: 0;
+    transform: translateY(-50px);
 }
 
-
-
-        /* Ustawienia dla tekstu "Anna Kunikowska" */
+/* Ustawienia dla tekstu "Anna Kunikowska" */
 .banner-text {
-    display: flex; /* Ustawiamy litery obok siebie */
+    display: flex;
     justify-content: center;
     font-size: 70px;
     color: white;
     font-family: 'Dancing Script', cursive;
-    letter-spacing: 3px; /* Odstępy między literami */
-        position: relative; /* Pozwala na przesunięcie tekstu */
-    top: 110px; /* Ustawi tekst trochę niżej w stosunku do nagłówka */
+    letter-spacing: 3px;
+    position: relative;
+    top: 110px;
 }
 
-  /* Początkowe ustawienie liter (ukrycie) "Anna Kunikowska"*/
-.banner-text span {
-    opacity: 0;
-    transform: translateY(20px); /* Przesunięcie liter w dół */
-    display: inline-block; /* Każda litera będzie blokiem inline */
-    animation: reveal 1s ease-out forwards;
-}
-
-/* Animacja ujawniania liter "Anna Kunikowska"*/
-@keyframes reveal {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Na początku litery są przesunięte w dół */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Końcowy efekt – litery są na swoim miejscu */
-    }
-}
-
-/* Opóźnienie dla każdej litery "Anna Kunikowska" */
-.banner-text span:nth-child(1) {
-    animation-delay: 1.1s;
-}
-.banner-text span:nth-child(2) {
-    animation-delay: 1.2s;
-}
-.banner-text span:nth-child(3) {
-    animation-delay: 1.3s;
-}
-.banner-text span:nth-child(4) {
-    animation-delay: 1.4s;
-}
-.banner-text span:nth-child(5) {
-    animation-delay: 1.5s;
-}
-.banner-text span:nth-child(6) {
-    animation-delay: 1.6s;
-}
-.banner-text span:nth-child(7) {
-    animation-delay: 1.7s;
-}
-.banner-text span:nth-child(8) {
-    animation-delay: 1.8s;
-}
-.banner-text span:nth-child(9) {
-    animation-delay: 1.9s;
-}
-.banner-text span:nth-child(10) {
-    animation-delay: 2s;
-}
-.banner-text span:nth-child(11) {
-    animation-delay: 2.1s;
-}
-.banner-text span:nth-child(12) {
-    animation-delay: 2.2s;
-}
-.banner-text span:nth-child(13) {
-    animation-delay: 2.3s;
-}
-.banner-text span:nth-child(14) {
-    animation-delay: 2.4s;
-}
-.banner-text span:nth-child(15) {
-    animation-delay: 2.5s;
-}
-.banner-text span:nth-child(16) {
-    animation-delay: 2.6s;
-}
-
-/* Opóźnienie 2 sekundy dla całego napisu "Anna Kunikowska" */
+/* Początkowe ustawienie liter (ukrycie) "Anna Kunikowska" */
 .banner-text span {
     opacity: 0;
     transform: translateY(20px);
     display: inline-block;
     animation: reveal 1s ease-out forwards;
-    animation-delay: 2s; /* Opóźnienie animacji o 2 sekundy */
 }
 
- /* Stylizacja przycisku "Zobacz ofertę" */
-        .btn-offer {
-            display: inline-block;
-            background-color: #91627b; /* Kolor tła przycisku */
-            color: white; /* Kolor tekstu */
-            padding: 15px 30px; /* Odstępy wewnętrzne przycisku */
-            text-decoration: none; /* Usunięcie podkreślenia linku */
-            border-radius: 30px; /* Zaokrąglenie rogów */
-            font-size: 22px; /* Rozmiar czcionki */
-            font-weight: bold;
-            opacity: 0.7; /* Ustalamy początkową przezroczystość przycisku */
-            transition: background-color 0.3s ease, opacity 0.3s ease; /* Płynna zmiana koloru i przezroczystości */
-        }
+/* Animacja ujawniania liter "Anna Kunikowska" */
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Efekt po najechaniu */
-        .btn-offer:hover {
-            background-color: #91627be; /* Kolor tła przycisku przy hover */
-            opacity: 1; /* Pełna nieprzezroczystość przy najechaniu */
-            transform: scale(1.1); /* Powiększenie przycisku */
-        }
-
-        /* Dodaj animację powiększenia "Zobacz ofertę po 3 sekundach */
-        @keyframes scale-up {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.25);
-            }
-        }
-
-        .animate-scale-up {
-            animation: scale-up 0.8s ease-out forwards;
-            animation-delay: 3s; /* Opóźnienie animacji o 3 sekundy */
-        }
+/* Opóźnienie dla każdej litery "Anna Kunikowska" */
+.banner-text span:nth-child(1) { animation-delay: 1.1s; }
+.banner-text span:nth-child(2) { animation-delay: 1.2s; }
+.banner-text span:nth-child(3) { animation-delay: 1.3s; }
+.banner-text span:nth-child(4) { animation-delay: 1.4s; }
+.banner-text span:nth-child(5) { animation-delay: 1.5s; }
+.banner-text span:nth-child(6) { animation-delay: 1.6s; }
+.banner-text span:nth-child(7) { animation-delay: 1.7s; }
+.banner-text span:nth-child(8) { animation-delay: 1.8s; }
+.banner-text span:nth-child(9) { animation-delay: 1.9s; }
+.banner-text span:nth-child(10) { animation-delay: 2s; }
+.banner-text span:nth-child(11) { animation-delay: 2.1s; }
+.banner-text span:nth-child(12) { animation-delay: 2.2s; }
+.banner-text span:nth-child(13) { animation-delay: 2.3s; }
+.banner-text span:nth-child(14) { animation-delay: 2.4s; }
+.banner-text span:nth-child(15) { animation-delay: 2.5s; }
+.banner-text span:nth-child(16) { animation-delay: 2.6s; }
 
 
-        /* Animacje */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* Styl domyślny – dla największych ekranów */
+.banner h2 {
+    font-size: 80px;
+    top: -60px;
+}
 
-        .section-title-bordered {
-            font-size: 32px;
-            margin-bottom: 5px; /* Zmniejszenie marginesu poniżej tytułu */
-            padding: 10px 20px;
-            border: 2px solid #91627b;
-            border-radius: 20px;
-            width: max-content;
-            color: white;
-            background-color: #91627b;
-            text-align: left;
-            position: absolute; /* Zmienione na absolute */
-            left: 100px; /* Zmienione na left, aby było po lewej stronie */
-            top: 50px; /* Wyrównanie do góry */
-        }
+.banner-text {
+    top: 100px;
+    font-size: 60px;
+}
 
-       
+/* Stylizacja przycisku "Zobacz ofertę" */
+.btn-offer {
+    display: inline-block;
+    background-color: #91627b;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-out;
+}
 
-/* Sekcja o Mnie */
-        .content {
-            text-align: justify;
-            font-size: 20px;
-            color: #555;
-            max-width: 50%; /* Zmniejszenie szerokości tekstu w sekcji "O mnie" */
-            line-height: 1.6;
-            margin-right: 100px; /* Margines z prawej strony */
-            transition: transform 0.3s ease; /* Dodanie animacji transformacji */
-        }
-          /* Efekt po najechaniu na nagłówek "o mnie" */
-            .section-title-bordered:hover {
-            background-color: #91627be; /* Kolor tła przycisku przy hover */
-            opacity: 1; /* Pełna nieprzezroczystość przy najechaniu */
-            transform: scale(1.1); /* Powiększenie przycisku */
-  }
+/* Efekt po najechaniu */
+.btn-offer:hover {
+    background-color: #91627b;
+    opacity: 1;
+    transform: scale(1.1);
+}
 
-          .image-container {
-            max-width: 60%; /* Większe zdjęcie */
-            margin-left: 30px; /* Oddalenie zdjęcia od tekstu */
-        }
+/* Dodaj animację powiększenia "Zobacz ofertę" po 3 sekundach */
+@keyframes scale-up {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.25); }
+}
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px; /* Zaokrąglenie krawędzi zdjęcia */
-        }
+.animate-scale-up {
+    animation: scale-up 0.8s ease-out forwards;
+    animation-delay: 3s;
+}
 
-/* Efekt powiększenia po najechaniu kursorem */
+/* Domyślne ustawienia (dla ekranów powyżej 1024px) */
+.btn-offer {
+    font-size: 18px;
+    padding: 14px 28px;
+    margin-top: 25px;
+}
+
+/* Styl nagłówka sekcji z ramką */
+.section-title-bordered {
+    font-size: 32px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    border: 2px solid #91627b;
+    border-radius: 20px;
+    width: max-content;
+    color: white;
+    background-color: #91627b;
+    text-align: left;
+    position: relative;  /* Zmienione z absolute na relative */
+    left: 0;             /* Usunięto left: 100px */
+    top: 0;              /* Usunięto top: 50px */
+}
+	  
+	/* === SEKCA O MNIE – UKŁAD DOMYŚLNY (DESKTOP >1200px) === */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 50%;
+    text-align: justify;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+.section-title-bordered:hover {
+    background-color: #91627b;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    flex: 1;
+}
+
 .image-container:hover {
-    transform: scale(1.05);  /* Powiększenie sekcji o 5% */
-    transition: transform 0.3s ease-in-out;  /* Płynna animacja powiększenia */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}  
+
+	  /* Pasek nawigacyjny */
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px 20px;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    font-family: 'The Seasons', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    overflow-x: hidden;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
 }
-/* Efekt powiększenia po najechaniu kursorem */
-.image-container:hover {
-    transform: scale(1.05);  /* Powiększenie sekcji o 5% */
-    transition: transform 0.3s ease-in-out;  /* Płynna animacja powiększenia */
-}
- 
-
-
-
-        /* Pasek nawigacyjny */
-        .sticky-navbar {
-            position: sticky;
-            top: 0;
-            background-color: white; /* Pasek nawigacyjny z białym tłem */
-            padding: 10px 20px;
-            text-align: left; /* Wyrównanie logo do lewej */
-            color: black; /* Kolor tekstu ogólny na czarny */
-            font-size: 16px; /* Mniejsza czcionka */
-            font-weight: 700; /* Pogrubiona czcionka */
-            width: 100%; /* Ustawienie szerokości na 100% */
-            font-family: 'The Seasons', sans-serif; /* Czcionka "The Seasons" */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień na pasku */
-            display: flex;
-            justify-content: space-between; /* Rozmieszczenie logo i menu po dwóch stronach */
-            align-items: center;
-	    z-index: 1000; /* Ważne, aby pasek nawigacyjny był na wierzchu */
-            overflow-x: hidden;
-            transition: opacity 0.6s ease, transform 0.6s ease; /* Płynna animacja zanikania i pojawiania się */
-max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
-    margin: 0 auto; /* Centrowanie sekcji */
-    padding: 10px 0; /* Zmniejszenie paddingu, by nie wychodził poza ekran */
-        }
-
 
 /* Jeśli masz kontener wokół paska, to również powinieneś ustawić max-width */
 .sticky-navbar-container {
@@ -316,48 +292,72 @@ max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
     margin: 0 auto; /* Centrowanie paska nawigacyjnego */
 }
 
-/* Styl, gdy pasek nawigacyjny jest ukryty */
+
+
+/* Ukrycie paska nawigacyjnego */
 .sticky-navbar.hidden {
-    opacity: 0; /* Ukrywa pasek */
-    transform: translateY(-100%); /* Przesuwa pasek poza widoczny obszar */
+    opacity: 0;
+    transform: translateY(-100%);
+    visibility: hidden;
 }
 
-        /* Sekcje nawigacyjne po prawej stronie */
-        .nav-links {
-            display: flex;
-            justify-content: space-evenly;
-            flex-grow: 1; /* Sprawia, że linki zajmują całą przestrzeń po prawej stronie */
-            margin-right: 20px;
-        }
+/* Nav Links */
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin-right: 20px;
 
-        /* Linki nawigacyjne */
-        .nav-link {
-            color: #91627b; /* Kolor tekstu nazw sekcji na pasku nawigacyjnym */
-            margin: 0 20px;
-            text-decoration: none;
-            padding: 10px;
-            transition: all 0.3s ease-in-out;
-            border-radius: 20px; /* Zaokrąglone rogi */
-        }
+}
 
-        /* Efekt hover dla linków */
-        .nav-link:hover {
-            text-decoration: none;
-            background-color: #91627b; /* Kolor tła na #91627b po najechaniu */
-            color: white; /* Kolor tekstu na biały po najechaniu */
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
+/* Linki nawigacyjne */
+.nav-link {
+    color: #91627b;
+    margin: 0 20px;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    font-size: 20px;
+    white-space: nowrap;
+}
 
-        /* Logo w lewym rogu */
-        .logo {
-            height: 100px; /* Zwiększenie wysokości logo do 100px */
-            width: auto;  /* Automatyczne dopasowanie szerokości, proporcjonalnie do wysokości */
-            margin-right: 20px;
-            vertical-align: middle; /* Wyrównanie w pionie */
-        }
+.nav-link:hover {
+    text-decoration: none;
+    background-color: #91627b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
 
-        /* Strzałka na dole prawej strony */
+}
+
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+
+
+	  /* === DOMYŚLNY STYL (dla ekranów powyżej 1440px) === */
+.logo {
+    height: 100%;
+}
+
+.sticky-navbar {
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin: 0 15px;
+    padding: 10px 20px;
+}
+
+	  /* Strzałka na dole prawej strony */
         .scroll-to-top {
             position: fixed;
             bottom: 20px;
@@ -390,58 +390,60 @@ max-width: 100%; /* Sekcja nie wyjdzie poza ekran */
             color: white; /* Kolor strzałki zmienia się na biały przy hover */
         }
 
+
+
         /* Nowa sekcja "Oferta" z dwiema kolumnami */
-        .offer-container {
-            display: flex;
-            justify-content: center; /* Wyśrodkowanie kolumn */
-            gap: 70px;
-            margin-top: 20px;
- 	    
-        }
+.offer-container {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie kolumn */
+    gap: 70px;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Zapobiega zawijaniu kolumn */
+}
 
-        .offer-column {
-            width: 40%;
-            text-align: justify;
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
+.offer-column {
+    width: 40%;
+    text-align: justify;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
 
-        .offer-column h3 {
-            font-size: 30px; /* Większa czcionka dla tytułów */
-            color: #91627b;
-	    text-align: center; /* Wyśrodkowanie tekstu */
-            margin-bottom: 40px;
-        }
+.offer-column h3 {
+    font-size: 30px; /* Większa czcionka dla tytułów */
+    color: #91627b;
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin-bottom: 40px;
+}
 
-        .offer-column:last-child {
-            border-left: 2px solid #91627b; /* Kreska oddzielająca kolumny */
-            padding-left: 50px;
-        }
-
+.offer-column:last-child {
+    border-left: 2px solid #91627b; /* Kreska oddzielająca kolumny */
+    padding-left: 30px;
+}
 
 /* Zdjęcia w sekcji oferta Diagnoza i Terapia */
 .offer-img-container {
     display: flex;
     justify-content: center;
     margin-bottom: 15px; /* Odstęp między zdjęciem a tytułem */
+    transition: transform 0.3s ease-in-out;
 }
+
 /* Efekt powiększenia po najechaniu kursorem */
 .offer-img-container:hover {
-    transform: scale(1.05);  /* Powiększenie sekcji o 5% */
-    transition: transform 0.3s ease-in-out;  /* Płynna animacja powiększenia */
+    transform: scale(1.05);
 }
 
 /* Stylizacja zdjęć - okrągłe z ramką - Diagnoza i Terapia */
 .offer-img {
-    width: 170px; /* Szerokość zdjęcia */
-    height: 170px; /* Wysokość zdjęcia */
-    border-radius: 50%; /* Okrągły kształt */
-    border: 8px solid #91627b; /* Ramka o grubości 8px i kolorze #91627b */
-    object-fit: cover; /* Zapewnia, że zdjęcie będzie dobrze dopasowane w okrągłej ramce */
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid #91627b;
+    object-fit: cover;
 }
-
-
 
 /* Sekcja Płatności */
 #payments {
@@ -574,37 +576,7 @@ font-family: 'Dancing Script', cursive;
     transform: scale(1.05); /* Efekt powiększenia przycisku */
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
-    #payments {
-        padding: 30px 20px; /* Zmniejszenie paddingu */
-        flex-direction: column; /* Ustawienie elementów w kolumnie */
-        gap: 20px; /* Odstęp między elementami */
-    }
-
-    .content-container h2 {
-        font-size: 24px; /* Mniejszy rozmiar czcionki nagłówka na małych ekranach */
-    }
-
-    .content-container p {
-        font-size: 14px; /* Mniejszy rozmiar czcionki */
-        max-width: 100%; /* Rozciągnięcie tekstu na pełną szerokość */
-    }
-
-    .pricing-content {
-        width: 90%; /* Szerokość banera na małych ekranach */
-    }
-
-    .btn-see-pricing {
-        padding: 12px 30px; /* Mniejsze przyciski na małych ekranach */
-        font-size: 16px; /* Mniejszy rozmiar czcionki */
-    }
-}
-
-
-
-
-/* Sekcja SPECJALIZACJE o różowym tle */
+	  /* Sekcja SPECJALIZACJE o różowym tle */
 .pink-section {
     background-color: #91627b;  /* Kolor tła */
     padding: 50px 0;
@@ -700,22 +672,6 @@ font-family: 'Dancing Script', cursive;
   font-size: 18px;
   color: #666;
   line-height: 1.6;  /* Lepsza czytelność tekstu */
-}
-
-@media (max-width: 768px) {
-  .image-text-section {
-    flex-direction: column;  /* Na urządzeniach mobilnych obrazek i tekst będą w kolumnie */
-    gap: 20px; /* Odstęp między zdjęciem a tekstem */
-  }
-
-  .image-container img {
-    width: 100%;  /* Obrazek wypełnia całą szerokość */
-  }
-
-  .image-text-section {
-    margin-left: 0;  /* Usunięcie marginesu z lewej strony na mniejszych ekranach */
-    margin-right: 0;  /* Usunięcie marginesu z prawej strony na mniejszych ekranach */
-  }
 }
 
 /* Styl dla sekcji Oferta 2 .image-text-section ANIMACJE */
@@ -821,27 +777,8 @@ iframe {
     margin-top: 20px; /* Dodanie marginesu u góry */
     margin-bottom: 20px; /* Dodanie marginesu u dołu */
 }
-
-
-/* Zapewnienie, że na małych ekranach elementy będą miały odpowiednią szerokość */
-
-@media (max-width: 768px) {
-  .contact-item {
-    width: 45%; /* Zwiększenie szerokości na mniejszych ekranach */
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-item {
-    width: 100%; /* Cała szerokość na najwęższych ekranach */
-  }
-}
-
-
-
-
-
-    </style>
+	  
+  </style>
 </head>
 <body>
 
@@ -849,7 +786,7 @@ iframe {
     <div class="sticky-navbar">
         <!-- Logo w lewym rogu -->
         <img src="images/logo.png" alt="Logo Gabinetu Logopedycznego" class="logo"> <!-- Zmieniona ścieżka do logo.gif -->
-        
+
         <!-- Sekcje nawigacyjne po prawej stronie -->
         <div class="nav-links">
             <a href="#home" class="nav-link">Strona Główna</a>
@@ -869,20 +806,26 @@ iframe {
  <!-- Przycisk Zobacz ofertę -->
      <a href="#offer" class="btn-offer" id="btnOffer">Zobacz ofertę</a>
     </div>
- 
 
-    <!-- Sekcja O Mnie -->
-    <section id="about">
-        <div class="content">
-            <div class="section-title-bordered">
-                O Mnie
-            </div>
-            <p>Nazywam się Anna Kunikowska, jestem neurologopedą, specjalistą w zakresie wczesnej interwencji logopedycznej oraz terapeutą miofunkcjonalnym. Moje wykształcenie zdobyłam na renomowanym Instytucie Logopedii, który powstał w wyniku współpracy Uniwersytetu Gdańskiego i Gdańskiego Uniwersytetu Medycznego, a także w oparciu o liczne szkolenia oraz warsztaty specjalistyczne, które regularnie odbywam, aby dostarczyć pacjentom najbardziej efektywnych i nowoczesnych metod terapii.</p>
-        </div>
-        <div class="image-container">
-            <img src="images/moja_fotografia.jpg" alt="Anna Kunikowska" />
-        </div>
-    </section>
+
+  <section id="about">
+  <div class="about-section">
+    <div class="content">
+      <div class="section-title-bordered">O Mnie</div>
+      <p>
+        Nazywam się Anna Kunikowska, jestem neurologopedą, specjalistą w zakresie wczesnej interwencji logopedycznej 
+oraz terapeutą miofunkcjonalnym. Moje wykształcenie zdobyłam na renomowanym Instytucie Logopedii, 
+który powstał w wyniku współpracy Uniwersytetu Gdańskiego i Gdańskiego Uniwersytetu Medycznego, 
+a także w oparciu o liczne szkolenia oraz warsztaty specjalistyczne, które regularnie odbywam, 
+aby dostarczyć pacjentom najbardziej efektywnych i nowoczesnych metod terapii.
+      </p>
+    </div>
+    <div class="image-container">
+      <img src="images/moja_fotografia.jpg" alt="Anna Kunikowska" />
+    </div>
+  </div>
+</section>
+
 
     <!-- Sekcja Oferta -->
     <section id="offer">
@@ -916,7 +859,7 @@ iframe {
     <div class="content-container">
         <h2><b>Płatności</b></h2>
         <p>Oferujemy różnorodne opcje płatności, aby dostosować się do Twoich preferencji. Możesz uiścić opłatę za sesje terapeutyczne przelewem bankowym, gotówką lub za pomocą aplikacji płatniczych. W przypadku pytań dotyczących płatności, prosimy o kontakt. Zależy nam na Twojej wygodzie!</p>
-        
+
         <!-- Przycisk Zobacz cennik -->
         <button class="btn-see-pricing" onclick="togglePricingBanner()">Zobacz cennik</button>
     </div>
@@ -1225,4 +1168,4 @@ window.addEventListener('scroll', function() {
 </script>
 
 </body>
-</html>
+</html>	  
